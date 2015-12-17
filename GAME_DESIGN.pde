@@ -74,7 +74,7 @@ void startscreen() {
 void mousePressed() {
   drag=1;
   // click to start game
-  if (mouseX>100 && mouseX<350 && mouseY>200 && mouseY<240) {
+  if (pageNumber==1&&(mouseX>100 && mouseX<350 && mouseY>200 && mouseY<240)) {
     pageNumber=2;
   }
   if (pageNumber==2 && (dist(mouseX, mouseY, 400, 280)<20)) {
