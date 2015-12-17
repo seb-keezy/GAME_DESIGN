@@ -78,7 +78,7 @@ void mousePressed() {
     pageNumber=2;
   }
   if (pageNumber==2 && (dist(mouseX, mouseY, 400, 280)<20)) {
-    pageNumber=3;
+    pageNumber=4;
   }
 }
 
