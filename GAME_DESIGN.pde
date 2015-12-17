@@ -1,6 +1,7 @@
 //main character vars
 //qwdwqd
 //qsdqw
+//qwdqwd
 float carX=20;
 float carY=120;
 //enemy 1 vars
