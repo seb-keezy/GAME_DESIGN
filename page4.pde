@@ -9,9 +9,7 @@ void page4(){
   cT+=.1;
   fill(#FF0000);
   rect(bX,bY,20,40);
-   bY+=5;
-   bX=100+40*sin(cT);
-   ellipse(bY, bY, 20, 20);
+
   
   
   
