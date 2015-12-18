@@ -17,10 +17,16 @@ void page4() {
   rect(bX, bY, 20, 40);
   bY=145+210*sin(cT);
   bX=80+200*cos(cT);
+  //enemy 2B movement
+  c2T+=.05;
   rect(b2X, b2Y, 20, 40);
-  b2Y=145+210*sin(cT);
-  b2X=40+200*cos(cT);
-   rect(b3X, b3Y, 20, 40);
-  b3Y=145+210*sin(cT);
-  b3X=0+200*cos(cT);
+  b2Y=145+210*sin(c2T);
+  b2X=40+200*cos(c2T);
+  //enemy 3B movement
+  c3T+=.2;
+  rect(b3X, b3Y, 20, 40);
+  b3Y=145+210*sin(c3T);
+  b3X=0+200*cos(c3T);
+  
+  //
 }
