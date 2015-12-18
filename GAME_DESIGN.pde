@@ -59,6 +59,17 @@ void draw() {
   if (pageNumber==4) {
     page4();
   }
+  if (keyPressed) {
+    if(key == 'b') {
+      pageNumber=1;
+    }
+    if(key == '1') {
+      pageNumber=3;
+    }
+     if(key == '2') {
+      pageNumber=4;
+    }
+  }
 }
 
 void mousePressed() {
