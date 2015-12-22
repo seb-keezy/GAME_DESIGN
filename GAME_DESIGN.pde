@@ -60,26 +60,33 @@ void draw() {
     page4();
   }
   if (keyPressed) {
-    if(key == 'b') {
+    if (key == 'b') {
       pageNumber=1;
     }
-    if(key == '1') {
+    if (key == '1') {
       pageNumber=3;
     }
-     if(key == '2') {
+    if (key == '2') {
       pageNumber=4;
     }
   }
 }
 
 void mousePressed() {
-  drag=1;
+
+  if (pageNumber ==1 && pageNumber ==2 && pageNumber ==3) 
+  {
+    drag=1;
+  }
   // click to start game
   if (pageNumber==1&&(mouseX>100 && mouseX<350 && mouseY>200 && mouseY<240)) {
     pageNumber=2;
   }
   if (pageNumber==2 && (dist(mouseX, mouseY, 400, 280)<20)) {
     pageNumber=4; // later on change this to 3
+  }
+  if (pageNumber==4) {
+    drag=2;
   }
 }
 
@@ -94,5 +101,8 @@ void mouseDragged() {
   }
   if (drag==1) {
     carY=mouseY;
+  }
+  if (drag==2) {
+    carX=mouseX;
   }
 }

@@ -4,6 +4,8 @@ float b2X=140;
 float b2Y=310;
 float b3X=180;
 float b3Y=310;
+float c2X=150;
+float c2Y=260;
 //round about
 void page4() {
   background(255);
@@ -27,6 +29,7 @@ void page4() {
   rect(b3X, b3Y, 20, 40);
   b3Y=145+210*sin(c3T);
   b3X=0+200*cos(c3T);
-  
+  fill(#0000FF);
+  rect(c2X,c2Y,20,40);
   //
 }
