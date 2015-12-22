@@ -8,6 +8,7 @@ float c2X=150;
 float c2Y=260;
 //round about
 void page4() {
+  stroke(0);
   background(255);
   fill(#989696);
   ellipse(100, 160, 480, 500);
@@ -29,6 +30,7 @@ void page4() {
   rect(b3X, b3Y, 20, 40);
   b3Y=145+210*sin(c3T);
   b3X=0+200*cos(c3T);
+  //good character
   fill(#0000FF);
   rect(c2X,c2Y,20,40);
   //

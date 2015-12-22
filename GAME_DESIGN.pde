@@ -70,14 +70,10 @@ void draw() {
       pageNumber=4;
     }
   }
+ 
 }
 
 void mousePressed() {
-
-  if (pageNumber ==1 && pageNumber ==2 && pageNumber ==3) 
-  {
-    drag=1;
-  }
   // click to start game
   if (pageNumber==1&&(mouseX>100 && mouseX<350 && mouseY>200 && mouseY<240)) {
     pageNumber=2;
@@ -87,6 +83,9 @@ void mousePressed() {
   }
   if (pageNumber==4) {
     drag=2;
+  }
+  if(pageNumber==3){
+  drag=1;
   }
 }
 
@@ -103,6 +102,6 @@ void mouseDragged() {
     carY=mouseY;
   }
   if (drag==2) {
-    carX=mouseX;
+    c2X=mouseX;
   }
 }
