@@ -104,10 +104,12 @@ void mouseDragged() {
   if (drag==2) {
     c2X=mouseX;
   }
+  //c2X left and right barrier
   if (c2X<118) {
     c2X=118;
   }
   if (c2X+20>298) {
     c2X=278;
   }
+  //
 }
