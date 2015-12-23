@@ -1,11 +1,22 @@
+//level 2
+//enemy 1 vars
 float bX=100;
 float bY=310;
+//enemy 2 vars
 float b2X=140;
 float b2Y=310;
+//enemy 3 vars
 float b3X=180;
 float b3Y=310;
+//enemy 4 vars
+float b4X=140;
+float b4Y=250;
+float c4T;
+
+//main character, level 2
 float c2X=150;
 float c2Y=260;
+
 //round about
 void page4() {
   stroke(0);
@@ -26,12 +37,17 @@ void page4() {
   b2Y=145+210*sin(c2T);
   b2X=40+200*cos(c2T);
   //enemy 3B movement
-  c3T+=.2;
+  c3T+=.075;
   rect(b3X, b3Y, 20, 40);
   b3Y=145+210*sin(c3T);
   b3X=0+200*cos(c3T);
+  //enemy 4B movement
+  c4T+=.04;
+  rect(b4X,b4Y,20,40);
+  b4Y=110+250*sin(c4T);
+  b4X=60+200*cos(c4T);
   //good character
   fill(#0000FF);
   rect(c2X,c2Y,20,40);
-  //
+  
 }
