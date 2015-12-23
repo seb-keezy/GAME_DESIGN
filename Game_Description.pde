@@ -8,5 +8,5 @@ void page2() {
   text("THE OPPOSITE DIRECTION, AND, SEEING", 30, 210);
   text("AS THE COPS WOULD BE TOO AFRIAD OF", 30, 250);
   text("CAUSING AN ACCIDENT BY FOlLOWING HIM.", 30, 290);
-  ellipse(400, 280, 40, 40);
+  ellipse(400, 280, 40, 40); //Button to Level 1
 }
