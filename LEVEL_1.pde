@@ -1,3 +1,7 @@
+float c1difX = 0.0; 
+float c1difY = 0.0; 
+boolean core = false;
+boolean lock = false;
 void page3() {
   if (carY<50) {
     carY=50;
@@ -184,13 +188,20 @@ void page3() {
   textSize(15);
   text(count, 100, 100);
   //Button for next page
-  fill(0,alpha);
-  stroke(0,alpha);
-  ellipse(400,280,40,40);
-  if(count>300 && aX<-50 && a2X<-50&& a3X<-50){
+  fill(0, alpha);
+  stroke(0, alpha);
+  ellipse(400, 280, 40, 40);
+  if (count>300 && aX<-50 && a2X<-50&& a3X<-50) {
     alpha=255;
     aVX=0;
     a2VX=0;
     a3VX=0;
+  }
+  if (mouseX>carX && mouseX<carX+50 && mouseY>carY && mouseY<carY+20) {
+    core = true;  
+    if (!lock) {
+    }
+  } else {
+    core = false;
   }
 }

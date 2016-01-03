@@ -23,8 +23,20 @@ float b5T=-.75*PI;
 float c2X=150;
 float c2Y=260;
 float count2;
+//spot drag varriables
+float c2difX = 0.0; 
+float c2difY = 0.0; 
+boolean corp = false;
+boolean lose = false;
 //round about
 void page4() {
+
+  if (c2X+20>298) {
+    c2X=278;
+  }
+  if (c2X<118) {
+    c2X=118;
+  }
   count2++;
   stroke(0);
   background(255);
@@ -50,16 +62,38 @@ void page4() {
   b3X=0+200*cos(b3T);
   //enemy 4B movement
   b4T+=.04;
-  rect(b4X,b4Y,20,30);
+  rect(b4X, b4Y, 20, 30);
   b4Y=110+250*sin(b4T);
   b4X=60+200*cos(b4T);
   //enemy 5B movement
   b5T+=.075;
-  rect(b5X,b5Y,20,30);
+  rect(b5X, b5Y, 20, 30);
   b5Y=110+250*sin(b5T);
   b5X=60+200*cos(b5T);
   //good character
   fill(#0000FF);
-  rect(c2X,c2Y,20,40);
-  
+  rect(c2X, c2Y, 20, 40);
+  if (mouseX>c2X && mouseX<c2X+20 && mouseY>c2Y && mouseY<c2Y+40) {
+    corp = true;  
+    if (!lose) {
+    }
+  } else {
+    corp = false;
+  }
+  text(count2, 100, 100);
+  if (bY+30>c3Y && bX+20>c3X && bX<c3X+20) {
+    count2=0;
+  }
+  if (b2Y+30>c3Y && b2X+20>c3X && b2X<c3X+20) {
+    count2=0;
+  }
+  if (b3Y+30>c3Y && b3X+20>c3X && b3X<c3X+20) {
+    count2=0;
+  }
+  if (b4Y+30>c3Y && b4X+20>c3X && b4X<c3X+20) {
+    count2=0;
+  }
+  if (b5Y+30>c3Y && b5X+20>c3X && b5X<c3X+20) {
+    count2=0;
+  }
 }
