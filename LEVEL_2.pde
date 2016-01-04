@@ -94,17 +94,26 @@ void page4() {
   text(count2, 100, 100);
   if (bY+30>c3Y && bX+20>c3X && bX<c3X+20) {
     count2=0;
+    pageNumber=1;
   }
   if (b2Y+30>c3Y && b2X+20>c3X && b2X<c3X+20) {
     count2=0;
+    pageNumber=1;
   }
   if (b3Y+30>c3Y && b3X+20>c3X && b3X<c3X+20) {
     count2=0;
+    pageNumber=1;
   }
   if (b4Y+30>c3Y && b4X+20>c3X && b4X<c3X+20) {
     count2=0;
+    pageNumber=1;
   }
   if (b5Y+30>c3Y && b5X+20>c3X && b5X<c3X+20) {
     count2=0;
+    pageNumber=1;
+  }
+  if (b6Y+30>c3Y && b6X+20>c3X && b6X<c3X+20) {
+    count2=0;
+    pageNumber=1;
   }
 }
