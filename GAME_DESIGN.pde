@@ -28,6 +28,10 @@ int opacity=255;
 int count=0;
 //background elements
 float buildingX=300;
+float building2X=400;
+float building3X=500;
+float building4X=600;
+float building5X=700;
 float buildingY=0;
 //yellow lines
 float line1X;
@@ -115,7 +119,11 @@ void mousePressed() {
     c3difY = mouseY-c3Y;
   }
 }
+void mouseReleased(){
 
+
+
+}
 void mouseDragged() {
   if (carY<50) {
     carY=50;

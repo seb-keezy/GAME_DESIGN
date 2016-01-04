@@ -16,7 +16,44 @@ void page3() {
   rect(0, 50, 480, 200);
 
   rect(buildingX, buildingY, 50, 50);
+  rect(building2X, buildingY, 50, 50);
+  rect(building3X, buildingY, 50, 50);
+  rect(building4X, buildingY, 50, 50);
+  rect(building5X, buildingY, 50, 50);
+  fill(#000000);
+  rect(buildingX+10, buildingY+10, 30, 30);
+  rect(building2X+10, buildingY+10, 30, 30);  
+  rect(building3X+10, buildingY+10, 30, 30);  
+  rect(building4X+10, buildingY+10, 30, 30);  
+  rect(building5X+10, buildingY+10, 30, 30);
+  fill(#8E8282);
+  rect(buildingX+11, buildingY+11, 28, 28);
+  rect(building2X+11, buildingY+11, 28, 28);  
+  rect(building3X+11, buildingY+11, 28, 28);  
+  rect(building4X+11, buildingY+11, 28, 28);
+  rect(building5X+11, buildingY+11, 28, 28);
+
+
   buildingX-=5;
+  building2X-=5;  
+  building3X-=5;  
+  building4X-=5;
+  building5X-=5;
+  if (buildingX+50<0) {
+    buildingX=500;
+  }
+  if (building2X+50<0) {
+    building2X=500;
+  }
+  if (building3X+50<0) {
+    building3X=500;
+  }
+  if (building4X+50<0) {
+    building4X=500;
+  }
+  if (building5X+50<0) {
+    building5X=500;
+  }
   //yellow lines
   strokeWeight(6);
   stroke(#FFFF00);
