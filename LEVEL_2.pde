@@ -19,6 +19,10 @@ float b4T=.75*PI;
 float b5X=100;
 float b5Y=250;
 float b5T=-.75*PI;
+//enemy 6 vars
+float b6X=100;
+float b6Y=150;
+float b6T=PI;
 //main character, level 2
 float c2X=150;
 float c2Y=260;
@@ -31,8 +35,8 @@ boolean lose = false;
 //round about
 void page4() {
 
-  if (c2X+20>298) {
-    c2X=278;
+  if (c2X+20>415) {
+    c2X=395;
   }
   if (c2X<118) {
     c2X=118;
@@ -40,8 +44,9 @@ void page4() {
   count2++;
   stroke(0);
   background(255);
+  //street
   fill(#989696);
-  ellipse(100, 160, 480, 500);
+  ellipse(100, 160, 700, 650);
   fill(255);
   ellipse(-100, 160, 480, 480);
   //enemy 1B movement
@@ -54,22 +59,27 @@ void page4() {
   b2T+=.05;
   rect(b2X, b2Y, 20, 30);
   b2Y=145+210*sin(b2T);
-  b2X=40+200*cos(b2T);
+  b2X=40+300*cos(b2T);
   //enemy 3B movement
   b3T+=.075;
   rect(b3X, b3Y, 20, 30);
   b3Y=145+210*sin(b3T);
-  b3X=0+200*cos(b3T);
+  b3X=0+250*cos(b3T);
   //enemy 4B movement
   b4T+=.04;
   rect(b4X, b4Y, 20, 30);
   b4Y=110+250*sin(b4T);
-  b4X=60+200*cos(b4T);
+  b4X=90+300*cos(b4T);
   //enemy 5B movement
   b5T+=.075;
   rect(b5X, b5Y, 20, 30);
   b5Y=110+250*sin(b5T);
-  b5X=60+200*cos(b5T);
+  b5X=60+350*cos(b5T);
+  //enemy 6B movement
+  b6T+=.075;
+  rect(b6X, b6Y, 20, 30);
+  b6Y=110+250*sin(b6T);
+  b6X=60+110*cos(b6T);
   //good character
   fill(#0000FF);
   rect(c2X, c2Y, 20, 40);
@@ -80,6 +90,7 @@ void page4() {
   } else {
     corp = false;
   }
+  textSize(10);
   text(count2, 100, 100);
   if (bY+30>c3Y && bX+20>c3X && bX<c3X+20) {
     count2=0;
