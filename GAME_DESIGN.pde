@@ -96,7 +96,7 @@ void mousePressed() {
   if (pageNumber==2 && (dist(mouseX, mouseY, 400, 280)<20)) {
     pageNumber=4; // later on change this to 3
   }
-  if (pageNumber==4) {
+  if (pageNumber==5) {
     if (corp) { 
       lose = true;
     } else {
@@ -105,26 +105,26 @@ void mousePressed() {
     c2difX = mouseX-c2X; 
     c2difY = mouseY-c2Y;
   }
-  if (pageNumber==3) {
+  if (pageNumber==4) {
     if (core) { 
       lock = true;
     } else {
-      lock = false;
+      loc = false;
     }
     c1difX = mouseX-carX; 
     c1difY = mouseY-carY;
   }
 
-  if (pageNumber==5) {
+  if (pageNumber==6) {
     if (corn) { 
-      locked = true;
+      locked = true; //
     } else {
       locked = false;
     }
     c3difX = mouseX-c3X; 
     c3difY = mouseY-c3Y;
   }
-  if (pageNumber==6) {
+  if (pageNumber==3) {
     if (cor) { 
       loc = true;
     } else {

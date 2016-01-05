@@ -218,10 +218,10 @@ void page6() {
     e2VX=0;
   }
   if (mouseX>car1X && mouseX<car1X+50 && mouseY>car1Y && mouseY<car1Y+20) {
-    core = true;  
-    if (!lock) {
+    cor = true;  
+    if (!loc) {
     }
   } else {
-    core = false;
+    cor = false;
   }
 }
