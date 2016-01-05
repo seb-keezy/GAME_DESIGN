@@ -32,6 +32,7 @@ float c2difX = 0.0;
 float c2difY = 0.0; 
 boolean corp = false;
 boolean lose = false;
+float alpha3;
 //round about
 void page4() {
 
@@ -284,6 +285,21 @@ void page4() {
     //main character, level 2
     c2X=150;
     c2Y=260;
+  }
+  fill(0, alpha3);
+  stroke(0, alpha3);
+  ellipse(400, 280, 40, 40);
+  if (count3>300) {
+    alpha3=255;
+    bT=PI;
+    b2T=PI;
+    b3T=PI;
+    b4T=PI;
+    b5T=PI;
+    b6T=PI;
+  }
+  else{
+    alpha3=0;
   }
   if (mouseX<c2X && mouseX>c2X+20 && mouseY<c2Y && mouseY>c2Y+40) {
     core = true;  

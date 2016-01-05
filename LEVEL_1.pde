@@ -215,7 +215,7 @@ void page6(){
   fill(0, alpha);
   stroke(0, alpha);
   ellipse(400, 280, 40, 40);
-  if (count>300 && eX<=-50 && e2X<=-50) {
+  if (count>300) {
     eVX=0;
     e2VX=0;
     alpha=255;

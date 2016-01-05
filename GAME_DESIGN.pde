@@ -69,6 +69,9 @@ void draw() {
   if (pageNumber==6) {
     page5();
   }
+  if(pageNumber==7){
+    EndGame();
+  }
   if (keyPressed) {
     if (key == 'b') {
       pageNumber=1;
@@ -85,6 +88,9 @@ void draw() {
     if (key=='1') {
       pageNumber=3;
     }
+    if (key=='e'){
+      pageNumber=7;
+    }
   }
 }
 
@@ -99,11 +105,17 @@ void mousePressed() {
   if(pageNumber==3&&alpha==255&&(dist(mouseX,mouseY,400,280)<20)){
     pageNumber=4;
   }
-  if(pageNumber==4 && alpha==255 && (dist(mouseX,mouseY,400,280)<20)){
+  if(pageNumber==4 && alpha2==255 && (dist(mouseX,mouseY,400,280)<20)){
     pageNumber=5;
   }
-  if(pageNumber==5 && alpha==255 && (dist(mouseX,mouseY,400,280)<20)){
+  if(pageNumber==5 && alpha3==255 && (dist(mouseX,mouseY,400,280)<20)){
     pageNumber=6;
+  }
+  if(pageNumber==6 && alpha4==255 && (dist(mouseX,mouseY,400,280)<20)){
+    pageNumber=7;
+  }
+  if(pageNumber==7 && (dist(mouseX,mouseY,400,280)<20)){
+    pageNumber=1;
   }
   if (pageNumber==3) // later on change this to 3umber==5)// 
   {

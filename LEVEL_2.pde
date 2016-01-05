@@ -3,8 +3,8 @@ float c1difY = 0.0;
 boolean core = false;
 boolean lock = false;
 int count2;
+float alpha2;
 void page3() {
-  alpha=0;
   if (carY<50) {
     carY=50;
   }
@@ -227,15 +227,26 @@ void page3() {
   textSize(15);
   text(count2, 100, 100);
   //Button for next page
-  fill(0, alpha);
-  stroke(0, alpha);
+  fill(0, alpha2);
+  stroke(0, alpha2);
   ellipse(400, 280, 40, 40);
-  if (count2>300 && aX<-50 && a2X<-50&& a3X<-50) {
-    alpha=255;
+  if (count2>300) {
+    alpha2=255;
     aVX=0;
     a2VX=0;
     a3VX=0;
   }
+  else{
+    alpha2=0;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
   if (mouseX>carX && mouseX<carX+50 && mouseY>carY && mouseY<carY+20) {
     core = true;  
     if (!lock) {
