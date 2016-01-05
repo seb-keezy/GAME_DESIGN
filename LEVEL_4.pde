@@ -24,7 +24,9 @@ float d3Y=210;
 float d3VX=8;
 int Amp3=(int)(random(15)+5);
 float d3T;
+int count4=0;
 void page5() {
+  count4++;
   background(#FFFFFF);
   //street
   fill(#8E8282);
@@ -147,7 +149,7 @@ void page5() {
   // COllISION WITH ENEMY 1
   if (dX<carX+50 && carY+20>dY && carY<dY+20) {
     pageNumber=1;
-    count=0;
+    count4=0;
     //main character vars
     carX=20;
     carY=120;
@@ -175,7 +177,7 @@ void page5() {
   // COllISION WITH ENEMY 2
   if (d2X<carX+50 && carY+20>d2Y && carY<d2Y+20) {
     pageNumber=1;
-    count=0;
+    count4=0;
     //main character vars
     carX=20;
     carY=120;
@@ -203,7 +205,7 @@ void page5() {
   // COllISION WITH ENEMY 3
   if (d3X<carX+50 && carY+20>d3Y && carY<d3Y+20) {
     pageNumber=1;
-    count=0;
+    count4=0;
     //main character vars
     carX=20;
     carY=120;

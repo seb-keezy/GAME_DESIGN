@@ -24,9 +24,9 @@ float c3T;
 
 //car dragging
 int drag=0;
-int opacity=255;
-int count=0;
-//background elements
+
+//background eleint count=0;
+int opacity=225;
 float buildingX=300;
 float building2X=400;
 float building3X=500;
@@ -94,9 +94,19 @@ void mousePressed() {
     pageNumber=2;
   }
   if (pageNumber==2 && (dist(mouseX, mouseY, 400, 280)<20)) {
-    pageNumber=4; // later on change this to 3
+    pageNumber=3;
   }
-  if (pageNumber==5) {
+  if(pageNumber==3&&alpha==255&&(dist(mouseX,mouseY,400,280)<20)){
+    pageNumber=4;
+  }
+  if(pageNumber==4 && alpha==255 && (dist(mouseX,mouseY,400,280)<20)){
+    pageNumber=5;
+  }
+  if(pageNumber==5 && alpha==255 && (dist(mouseX,mouseY,400,280)<20)){
+    pageNumber=6;
+  }
+  if (pageNumber==3) // later on change this to 3umber==5)// 
+  {
     if (corp) { 
       lose = true;
     } else {

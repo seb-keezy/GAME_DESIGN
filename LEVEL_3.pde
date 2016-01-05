@@ -26,7 +26,7 @@ float b6T=PI;
 //main character, level 2
 float c2X=150;
 float c2Y=260;
-float count2;
+float count3;
 //spot drag varriables
 float c2difX = 0.0; 
 float c2difY = 0.0; 
@@ -41,7 +41,7 @@ void page4() {
   if (c2X<118) {
     c2X=118;
   }
-  count2++;
+  count3++;
   stroke(0);
   background(255);
   //street
@@ -92,9 +92,9 @@ void page4() {
     corp = false;
   }
   textSize(10);
-  text(count2, 100, 100);
+  text(count3, 100, 100);
   if (bY+30>c2Y && c2Y+40>bY && bX+20>c2X && bX<c2X+20) {
-    count2=0;
+    count3=0;
     pageNumber=1;
     //level 2
     //enemy 1 vars
@@ -126,7 +126,7 @@ void page4() {
     c2Y=260;
   }
   if (b2Y+30>c2Y && c2Y+40>b2Y && b2X+20>c2X && b2X<c2X+20) {
-    count2=0;
+    count3=0;
     pageNumber=1;
     //level 2
     //enemy 1 vars
@@ -158,7 +158,7 @@ void page4() {
     c2Y=260;
   }
   if (b3Y+30>c2Y && c2Y+40>b3Y && b3X+20>c2X && b3X<c2X+20) {
-    count2=0;
+    count3=0;
     pageNumber=1;
     //level 2
     //enemy 1 vars
@@ -190,7 +190,7 @@ void page4() {
     c2Y=260;
   }
   if (b4Y+30>c2Y && c2Y+40>b4Y && b4X+20>c2X && b4X<c2X+20) {
-    count2=0;
+    count3=0;
     pageNumber=1;
     //level 2
     //enemy 1 vars
@@ -222,7 +222,7 @@ void page4() {
     c2Y=260;
   }
   if (b5Y+30>c2Y &&c2Y+40>b5Y && b5X+20>c2X && b5X<c2X+20) {
-    count2=0;
+    count3=0;
     pageNumber=1;
     //level 2
     //enemy 1 vars
@@ -254,7 +254,7 @@ void page4() {
     c2Y=260;
   }
   if (b6Y+30>c3Y && c2Y+40>b3Y &&  b6X+20>c3X && b6X<c3X+20) {
-    count2=0;
+    count3=0;
     pageNumber=1;
     //level 2
     //enemy 1 vars

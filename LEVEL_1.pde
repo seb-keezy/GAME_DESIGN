@@ -41,7 +41,9 @@ float c0difX = 0.0;
 float c0difY = 0.0; 
 boolean cor = false;
 boolean loc = false;
-void page6() {
+int count=0;
+void page6(){
+  count++;
   if (car1Y<50) {
     car1Y=50;
   }
@@ -153,12 +155,12 @@ void page6() {
   e2Y=50+(400/3)+AMP2*sin(e2T);
   e2X-=e2VX;
 
-  if (eX<car1X-80) {
+  if (eX<-80) {
     eX=520;
     AMP1=(int)(random(20)+5);
     eVX=(int)random(15)+8;
   }
-  if (e2X<car1X-80) {
+  if (e2X<-80) {
     e2X=520;
     AMP2=(int)(random(5)+5);
     e2VX=(int)random(15)+8;
@@ -213,10 +215,14 @@ void page6() {
   fill(0, alpha);
   stroke(0, alpha);
   ellipse(400, 280, 40, 40);
-  if (count>300 && eX<-50 && e2X<-50&& e3X<-50) {
+  if (count>300 && eX<=-50 && e2X<=-50) {
     eVX=0;
     e2VX=0;
+    alpha=255;
   }
+  else{
+      alpha=0;
+    }
   if (mouseX>car1X && mouseX<car1X+50 && mouseY>car1Y && mouseY<car1Y+20) {
     cor = true;  
     if (!loc) {

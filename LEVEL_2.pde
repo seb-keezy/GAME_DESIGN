@@ -2,14 +2,16 @@ float c1difX = 0.0;
 float c1difY = 0.0; 
 boolean core = false;
 boolean lock = false;
+int count2;
 void page3() {
+  alpha=0;
   if (carY<50) {
     carY=50;
   }
   if (carY+20>250) {
     carY=230;
   }
-  count++;
+  count2++;
   background(#FFFFFF);
   //street
   fill(#8E8282);
@@ -141,7 +143,7 @@ void page3() {
   // COllISION WITH ENEMY 1
   if (aX<carX+50 && carY+20>aY && carY<aY+20) {
     pageNumber=1;
-    count=0;
+    count2=0;
     //main character vars
     carX=20;
     carY=120;
@@ -169,7 +171,7 @@ void page3() {
   // COllISION WITH ENEMY 2
   if (a2X<carX+50 && carY+20>a2Y && carY<a2Y+20) {
     pageNumber=1;
-    count=0;
+    count2=0;
     //main character vars
     carX=20;
     carY=120;
@@ -197,7 +199,7 @@ void page3() {
   // COllISION WITH ENEMY 3
   if (a3X<carX+50 && carY+20>a3Y && carY<a3Y+20) {
     pageNumber=1;
-    count=0;
+    count2=0;
     //main character vars
     carX=20;
     carY=120;
@@ -223,12 +225,12 @@ void page3() {
     c3T=0;
   }
   textSize(15);
-  text(count, 100, 100);
+  text(count2, 100, 100);
   //Button for next page
   fill(0, alpha);
   stroke(0, alpha);
   ellipse(400, 280, 40, 40);
-  if (count>300 && aX<-50 && a2X<-50&& a3X<-50) {
+  if (count2>300 && aX<-50 && a2X<-50&& a3X<-50) {
     alpha=255;
     aVX=0;
     a2VX=0;
