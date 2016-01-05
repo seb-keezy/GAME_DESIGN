@@ -285,4 +285,11 @@ void page4() {
     c2X=150;
     c2Y=260;
   }
+  if (mouseX<c2X && mouseX>c2X+20 && mouseY<c2Y && mouseY>c2Y+40) {
+    core = true;  
+    if (!lock) {
+    }
+  } else {
+    core = false;
+  }
 }

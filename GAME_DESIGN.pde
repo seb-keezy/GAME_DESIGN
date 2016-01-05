@@ -55,35 +55,35 @@ void draw() {
   }
 
   if  (pageNumber==3) {
-    page3();
+    page6();
   }
   if  (pageNumber==2) {
     page2();
   }
   if (pageNumber==4) {
-    page4();
+    page3();
   }
   if (pageNumber==5) {
-    page5();
+    page4();
   }
   if (pageNumber==6) {
-    page6();
+    page5();
   }
   if (keyPressed) {
     if (key == 'b') {
       pageNumber=1;
     }
     if (key == '2') {
-      pageNumber=3;
-    }
-    if (key == '3') {
       pageNumber=4;
     }
-    if (key == '4') {
+    if (key == '3') {
       pageNumber=5;
     }
-    if (key=='1') {
+    if (key == '4') {
       pageNumber=6;
+    }
+    if (key=='1') {
+      pageNumber=3;
     }
   }
 }

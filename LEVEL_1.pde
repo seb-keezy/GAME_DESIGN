@@ -3,16 +3,16 @@ float car1X=20;
 float car1Y=120;
 //enemy 1 vars
 float eX=410;
-float eY=80;
+float eY=200/3;
 float eVX=8;
 int AMP1=(int)(random(20)+5);
 float eT;
 
 //enemy 2 vars
 float e2X=490;
-float e2Y=130;
+float e2Y=400/3;
 float e2VX=8;
-int AMP2=(int)(random(5)+5);
+int AMP2=(int)(random(10)+5);
 float e2T;
 
 //enemy 3 vars
@@ -145,12 +145,12 @@ void page6() {
   rect(eX, eY, 50, 20);
   eT+=.1;
   eX-=eVX;
-  eY=80+AMP1*sin(eT);
+  eY=50+(200/3)+AMP1*sin(eT);
 
   //enemy 2
   e2T+=.3;
   rect(e2X, e2Y, 50, 20);
-  e2Y=145+AMP2*sin(e2T);
+  e2Y=50+(400/3)+AMP2*sin(e2T);
   e2X-=e2VX;
 
   if (eX<car1X-80) {
@@ -174,20 +174,20 @@ void page6() {
     car1Y=120;
     //enemy 1 vars
     eX=410;
-    eY=80;
+    eY=50+(200/3);
     eVX=8;
     AMP1=(int)(random(20)+5);
     eT=0;
 
     //enemy 2 vars
     e2X=490;
-    e2Y=130;
+    e2Y=50+(400/3);
     e2VX=8;
     AMP2=(int)(random(5)+5);
     e2T=0;
   }
   // COllISION WITH ENEMY 2
-  if (e2X<car1X+50 && car1Y+20>e2Y && carY<e2Y+20) {
+  if (e2X<car1X+50 && car1Y+20>e2Y && car1Y<e2Y+20) {
     pageNumber=1;
     count=0;
     //main character vars
@@ -195,14 +195,14 @@ void page6() {
     car1Y=120;
     //enemy 1 vars
     eX=410;
-    eY=80;
+    eY=50+(200/3);
     eVX=8;
     AMP1=(int)(random(20)+5);
     eT=0;
 
     //enemy 2 vars
     e2X=490;
-    e2Y=130;
+    e2Y=50+(400/3);
     e2VX=8;
     AMP2=(int)(random(5)+5);
     e2T=0;
@@ -218,10 +218,10 @@ void page6() {
     e2VX=0;
   }
   if (mouseX>car1X && mouseX<car1X+50 && mouseY>car1Y && mouseY<car1Y+20) {
-    cor = true;  
-    if (!loc) {
+    core = true;  
+    if (!lock) {
     }
   } else {
-    cor = false;
+    core = false;
   }
 }
