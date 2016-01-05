@@ -145,12 +145,12 @@ void page6() {
   rect(eX, eY, 50, 20);
   eT+=.1;
   eX-=eVX;
-  eY=80+AMP1*sin(cT);
+  eY=80+AMP1*sin(eT);
 
   //enemy 2
   e2T+=.3;
   rect(e2X, e2Y, 50, 20);
-  e2Y=145+AMP2*sin(c2T);
+  e2Y=145+AMP2*sin(e2T);
   e2X-=e2VX;
 
   if (eX<car1X-80) {
