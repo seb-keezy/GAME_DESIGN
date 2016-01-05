@@ -4,6 +4,26 @@ float c3difX = 0.0;
 float c3difY = 0.0; 
 boolean corn = false;
 boolean locked = false;
+//enemy 1 vars
+float dX=410;
+float dY=80;
+float dVX=8;
+int Amp1=(int)(random(20)+5);
+float dT;
+
+//enemy 2 vars
+float d2X=490;
+float d2Y=130;
+float d2VX=8;
+int Amp2=(int)(random(5)+5);
+float d2T;
+
+//enemy 3 vars
+float d3X=450;
+float d3Y=210;
+float d3VX=8;
+int Amp3=(int)(random(15)+5);
+float d3T;
 void page5() {
   background(#FFFFFF);
   //street
@@ -89,5 +109,123 @@ void page5() {
     }
   } else {
     corn = false;
+  }
+  //enemy 1
+  fill(#FF0000);
+  rect(dX, dY, 50, 20);
+  dT+=.1;
+  dX-=dVX;
+  dY=80+Amp1*sin(cT);
+
+  //enemy 2
+  d2T+=.3;
+  rect(d2X, d2Y, 50, 20);
+  d2Y=145+Amp2*sin(c2T);
+  d2X-=d2VX;
+
+  //enemy 3
+  d3T+=.075;
+  rect(d3X, d3Y, 50, 20);
+  d3Y=210+Amp3*sin(c3T);
+  d3X-=d3VX;
+  if (dX<carX-80) {
+    dX=520;
+    Amp1=(int)(random(20)+5);
+    dVX=(int)random(15)+8;
+  }
+  if (d2X<carX-80) {
+    d2X=520;
+    Amp2=(int)(random(5)+5);
+    d2VX=(int)random(15)+8;
+  }
+  if (d3X<carX-80) {
+    d3X=520;
+    Amp3=(int)(random(15)+5);
+    d3VX=(int)random(15)+8;
+  }
+
+  // COllISION WITH ENEMY 1
+  if (dX<carX+50 && carY+20>dY && carY<dY+20) {
+    pageNumber=1;
+    count=0;
+    //main character vars
+    carX=20;
+    carY=120;
+    //enemy 1 vars
+    dX=410;
+    dY=80;
+    dVX=8;
+    Amp1=(int)(random(20)+5);
+    dT=0;
+
+    //enemy 2 vars
+    d2X=490;
+    d2Y=130;
+    d2VX=8;
+    Amp2=(int)(random(5)+5);
+    d2T=0;
+
+    //enemy 3 vars
+    d3X=450;
+    d3Y=210;
+    d3VX=8;
+    Amp3=(int)(random(15)+5);
+    d3T=0;
+  }
+  // COllISION WITH ENEMY 2
+  if (d2X<carX+50 && carY+20>d2Y && carY<d2Y+20) {
+    pageNumber=1;
+    count=0;
+    //main character vars
+    carX=20;
+    carY=120;
+    //enemy 1 vars
+    dX=410;
+    dY=80;
+    dVX=8;
+    Amp1=(int)(random(20)+5);
+    dT=0;
+
+    //enemy 2 vars
+    d2X=490;
+    d2Y=130;
+    d2VX=8;
+    Amp2=(int)(random(5)+5);
+    d2T=0;
+
+    //enemy 3 vars
+    d3X=450;
+    d3Y=210;
+    d3VX=8;
+    Amp3=(int)(random(15)+5);
+    d3T=0;
+  } 
+  // COllISION WITH ENEMY 3
+  if (d3X<carX+50 && carY+20>d3Y && carY<d3Y+20) {
+    pageNumber=1;
+    count=0;
+    //main character vars
+    carX=20;
+    carY=120;
+    //enemy 1 vars
+    dX=410;
+    dY=80;
+    dVX=8;
+    Amp1=(int)(random(20)+5);
+    dT=0;
+
+    //enemy 2 vars
+    d2X=490;
+    d2Y=130;
+    d2VX=8;
+    Amp2=(int)(random(5)+5);
+    d2T=0;
+
+    //enemy 3 vars
+    d3X=450;
+    d3Y=210;
+    d3VX=8;
+    Amp3=(int)(random(15)+5);
+    d3T=0;
   }
 }
