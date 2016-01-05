@@ -234,7 +234,7 @@ void page5() {
   fill(0, alpha4);
   stroke(0, alpha4);
   ellipse(400, 280, 40, 40);
-  if (count4>10) {
+  if (count4>300) {
     dVX=0;
     d2VX=0;
     d3VX=0;

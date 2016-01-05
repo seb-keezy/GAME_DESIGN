@@ -72,6 +72,9 @@ void draw() {
   if(pageNumber==7){
     EndGame();
   }
+  if(pageNumber==8){
+  page7();
+  }
   if (keyPressed) {
     if (key == 'b') {
       pageNumber=1;
@@ -90,6 +93,9 @@ void draw() {
     }
     if (key=='e'){
       pageNumber=7;
+    }
+    if(key=='5'){
+    pageNumber=8;
     }
   }
 }
@@ -115,6 +121,9 @@ void mousePressed() {
     pageNumber=7;
   }
   if(pageNumber==7 && (dist(mouseX,mouseY,400,280)<20)){
+    pageNumber=1;
+  }
+  if(pageNumber==8 && (dist(mouseX,mouseY,400,280)<20)){
     pageNumber=1;
   }
   if (pageNumber==3) // later on change this to 3umber==5)// 
@@ -155,6 +164,15 @@ void mousePressed() {
     c0difX = mouseX-car1X; 
     c0difY = mouseY-car1Y;
   }
+  if (pageNumber==8) {
+    if (co) { 
+      lo = true;
+    } else {
+      lo = false;
+    }
+    c4difX = mouseX-c4X; 
+    c4difY = mouseY-c4Y;
+  }
 }
 void mouseReleased() {
 }
@@ -193,5 +211,8 @@ void mouseDragged() {
   }
   if (loc) {
     car1Y = mouseY-c0difY;
+  }
+  if (lo) {
+    c4Y = mouseY-c4difY;
   }
 }
