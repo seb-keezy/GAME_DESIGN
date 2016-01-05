@@ -1,231 +1,288 @@
-float c3X=20;
-float c3Y=120;
-float c3difX = 0.0; 
-float c3difY = 0.0; 
-boolean corn = false;
-boolean locked = false;
+//level 2
 //enemy 1 vars
-float dX=410;
-float dY=80;
-float dVX=8;
-int Amp1=(int)(random(20)+5);
-float dT;
-
+float bX=100;
+float bY=310;
+float bT=PI;
 //enemy 2 vars
-float d2X=490;
-float d2Y=130;
-float d2VX=8;
-int Amp2=(int)(random(5)+5);
-float d2T;
-
+float b2X=140;
+float b2Y=310;
+float b2T=PI/2;
 //enemy 3 vars
-float d3X=450;
-float d3Y=210;
-float d3VX=8;
-int Amp3=(int)(random(15)+5);
-float d3T;
-void page5() {
-  background(#FFFFFF);
-  //street
-  fill(#8E8282);
-  rect(0, 50, 480, 200);
+float b3X=180;
+float b3Y=310;
+float b3T=PI;
+//enemy 4 vars
+float b4X=140;
+float b4Y=250;
+float b4T=.75*PI;
+//enemy 5 vars
+float b5X=100;
+float b5Y=250;
+float b5T=-.75*PI;
+//enemy 6 vars
+float b6X=100;
+float b6Y=150;
+float b6T=PI;
+//main character, level 2
+float c2X=150;
+float c2Y=260;
+float count2;
+//spot drag varriables
+float c2difX = 0.0; 
+float c2difY = 0.0; 
+boolean corp = false;
+boolean lose = false;
+//round about
+void page4() {
 
-  rect(buildingX, buildingY, 50, 50);
-  buildingX-=5;
-  //yellow lines
-  strokeWeight(6);
-  stroke(#FFFF00);
-  line(line1X, 50+40, line1X+40, 50+40);
-  line(line2X, 50+40, line2X+40, 50+40);
-  line(line3X, 50+40, line3X+40, 50+40);
-  line(line4X, 50+40, line4X+40, 50+40);
-  line(line5X, 50+40, line5X+40, 50+40);
-  line(line6X, 50+40, line6X+40, 50+40);
-  line(line7X, 50+40, line7X+40, 50+40);
-  line(line1X, 50+80, line1X+40, 50+80);
-  line(line2X, 50+80, line2X+40, 50+80);
-  line(line3X, 50+80, line3X+40, 50+80);
-  line(line4X, 50+80, line4X+40, 50+80);
-  line(line5X, 50+80, line5X+40, 50+80);
-  line(line6X, 50+80, line6X+40, 50+80);
-  line(line7X, 50+80, line7X+40, 50+80);
-  line(line1X, 50+120, line1X+40, 50+120);
-  line(line2X, 50+120, line2X+40, 50+120);
-  line(line3X, 50+120, line3X+40, 50+120);
-  line(line4X, 50+120, line4X+40, 50+120);
-  line(line5X, 50+120, line5X+40, 50+120);
-  line(line6X, 50+120, line6X+40, 50+120);
-  line(line7X, 50+120, line7X+40, 50+120);
-  line(line1X, 50+160, line1X+40, 50+160);
-  line(line2X, 50+160, line2X+40, 50+160);
-  line(line3X, 50+160, line3X+40, 50+160);
-  line(line4X, 50+160, line4X+40, 50+160);
-  line(line5X, 50+160, line5X+40, 50+160);
-  line(line6X, 50+160, line6X+40, 50+160);
-  line(line7X, 50+160, line7X+40, 50+160);
+  if (c2X+20>415) {
+    c2X=395;
+  }
+  if (c2X<118) {
+    c2X=118;
+  }
+  count2++;
   stroke(0);
-  strokeWeight(1);
-  line1X-=5;
-  line2X-=5;
-  line3X-=5;
-  line4X-=5;
-  line5X-=5;
-  line6X-=5;
-  line7X-=5;
-  if (line1X<-120) {
-    line1X=600;
-  }
-  if (line2X<-120) {
-    line2X=600;
-  }
-  if (line3X<-120) {
-    line3X=600;
-  }
-  if (line4X<-120) {
-    line4X=600;
-  }
-  if (line5X<-120) {
-    line5X=600;
-  }
-  if (line6X<-120) {
-    line6X=600;
-  }
-  if (line7X<-120) {
-    line7X=600;
-  } 
+  background(255);
+  //street
+  fill(#989696);
+  ellipse(100, 160, 700, 650);
+  fill(255);
+  ellipse(-100, 160, 480, 480);
+  //enemy 1B movement
+  bT+=.1;
+  fill(#FF0000);
+  rect(bX, bY, 20, 30);
+  bY=145+210*sin(bT);
+  bX=80+200*cos(bT);
+  //enemy 2B movement
+  b2T+=.05;
+  rect(b2X, b2Y, 20, 30);
+  b2Y=145+210*sin(b2T);
+  b2X=40+300*cos(b2T);
+  //enemy 3B movement
+  b3T+=.075;
+  rect(b3X, b3Y, 20, 30);
+  b3Y=145+210*sin(b3T);
+  b3X=0+250*cos(b3T);
+  //enemy 4B movement
+  b4T+=.04;
+  rect(b4X, b4Y, 20, 30);
+  b4Y=110+250*sin(b4T);
+  b4X=90+300*cos(b4T);
+  //enemy 5B movement
+  b5T+=.075;
+  rect(b5X, b5Y, 20, 30);
+  b5Y=110+250*sin(b5T);
+  b5X=60+350*cos(b5T);
+  //enemy 6B movement
+  b6T+=.075;
+  rect(b6X, b6Y, 20, 30);
+  b6Y=110+250*sin(b6T);
+  b6X=60+110*cos(b6T);
 
-  if (c3Y<50) {
-    c3Y=50;
-  }
-  if (c3Y+20>250) {
-    c3Y=230;
-  }
-  //main character
-  fill(#333FA7, opacity);
-  rect(c3X, c3Y, 50, 20);
-  if (mouseX>c3X && mouseX<c3X+50 && mouseY>c3Y && mouseY<c3Y+20) {
-    corn = true;  
-    if (!locked) {
+  //good character
+  fill(#0000FF);
+  rect(c2X, c2Y, 20, 40);
+  if (mouseX>c2X && mouseX<c2X+20 && mouseY>c2Y && mouseY<c2Y+40) {
+    corp = true;  
+    if (!lose) {
     }
   } else {
-    corn = false;
+    corp = false;
   }
-  //enemy 1
-  fill(#FF0000);
-  rect(dX, dY, 50, 20);
-  dT+=.1;
-  dX-=dVX;
-  dY=80+Amp1*sin(cT);
-
-  //enemy 2
-  d2T+=.3;
-  rect(d2X, d2Y, 50, 20);
-  d2Y=145+Amp2*sin(c2T);
-  d2X-=d2VX;
-
-  //enemy 3
-  d3T+=.075;
-  rect(d3X, d3Y, 50, 20);
-  d3Y=210+Amp3*sin(c3T);
-  d3X-=d3VX;
-  if (dX<carX-80) {
-    dX=520;
-    Amp1=(int)(random(20)+5);
-    dVX=(int)random(15)+8;
-  }
-  if (d2X<carX-80) {
-    d2X=520;
-    Amp2=(int)(random(5)+5);
-    d2VX=(int)random(15)+8;
-  }
-  if (d3X<carX-80) {
-    d3X=520;
-    Amp3=(int)(random(15)+5);
-    d3VX=(int)random(15)+8;
-  }
-
-  // COllISION WITH ENEMY 1
-  if (dX<carX+50 && carY+20>dY && carY<dY+20) {
+  textSize(10);
+  text(count2, 100, 100);
+  if (bY+30>c2Y && c2Y+40>bY && bX+20>c2X && bX<c2X+20) {
+    count2=0;
     pageNumber=1;
-    count=0;
-    //main character vars
-    carX=20;
-    carY=120;
+    //level 2
     //enemy 1 vars
-    dX=410;
-    dY=80;
-    dVX=8;
-    Amp1=(int)(random(20)+5);
-    dT=0;
-
+    bX=45;
+    bY=-100;
+    bT=PI;
     //enemy 2 vars
-    d2X=490;
-    d2Y=130;
-    d2VX=8;
-    Amp2=(int)(random(5)+5);
-    d2T=0;
-
+    b2X=40;
+    b2Y=-100;
+    b2T=PI/2;
     //enemy 3 vars
-    d3X=450;
-    d3Y=210;
-    d3VX=8;
-    Amp3=(int)(random(15)+5);
-    d3T=0;
+    b3X=0;
+    b3Y=-100;
+    b3T=PI;
+    //enemy 4 vars
+    b4X=90;
+    b4Y=-100;
+    b4T=.75*PI;
+    //enemy 5 vars
+    b5X=60;
+    b5Y=-100;
+    b5T=-.75*PI;
+    //enemy 6 vars
+    b6X=60;
+    b6Y=-100;
+    b6T=PI;
+    //main character, level 2
+    c2X=150;
+    c2Y=260;
   }
-  // COllISION WITH ENEMY 2
-  if (d2X<carX+50 && carY+20>d2Y && carY<d2Y+20) {
+  if (b2Y+30>c2Y && c2Y+40>b2Y && b2X+20>c2X && b2X<c2X+20) {
+    count2=0;
     pageNumber=1;
-    count=0;
-    //main character vars
-    carX=20;
-    carY=120;
+    //level 2
     //enemy 1 vars
-    dX=410;
-    dY=80;
-    dVX=8;
-    Amp1=(int)(random(20)+5);
-    dT=0;
-
+    bX=45;
+    bY=-100;
+    bT=PI;
     //enemy 2 vars
-    d2X=490;
-    d2Y=130;
-    d2VX=8;
-    Amp2=(int)(random(5)+5);
-    d2T=0;
-
+    b2X=40;
+    b2Y=-100;
+    b2T=PI/2;
     //enemy 3 vars
-    d3X=450;
-    d3Y=210;
-    d3VX=8;
-    Amp3=(int)(random(15)+5);
-    d3T=0;
-  } 
-  // COllISION WITH ENEMY 3
-  if (d3X<carX+50 && carY+20>d3Y && carY<d3Y+20) {
+    b3X=0;
+    b3Y=-100;
+    b3T=PI;
+    //enemy 4 vars
+    b4X=90;
+    b4Y=-100;
+    b4T=.75*PI;
+    //enemy 5 vars
+    b5X=60;
+    b5Y=-100;
+    b5T=-.75*PI;
+    //enemy 6 vars
+    b6X=60;
+    b6Y=-100;
+    b6T=PI;
+    //main character, level 2
+    c2X=150;
+    c2Y=260;
+  }
+  if (b3Y+30>c2Y && c2Y+40>b3Y && b3X+20>c2X && b3X<c2X+20) {
+    count2=0;
     pageNumber=1;
-    count=0;
-    //main character vars
-    carX=20;
-    carY=120;
+    //level 2
     //enemy 1 vars
-    dX=410;
-    dY=80;
-    dVX=8;
-    Amp1=(int)(random(20)+5);
-    dT=0;
-
+    bX=45;
+    bY=-100;
+    bT=PI;
     //enemy 2 vars
-    d2X=490;
-    d2Y=130;
-    d2VX=8;
-    Amp2=(int)(random(5)+5);
-    d2T=0;
-
+    b2X=40;
+    b2Y=-100;
+    b2T=PI/2;
     //enemy 3 vars
-    d3X=450;
-    d3Y=210;
-    d3VX=8;
-    Amp3=(int)(random(15)+5);
-    d3T=0;
+    b3X=0;
+    b3Y=-100;
+    b3T=PI;
+    //enemy 4 vars
+    b4X=90;
+    b4Y=-100;
+    b4T=.75*PI;
+    //enemy 5 vars
+    b5X=60;
+    b5Y=-100;
+    b5T=-.75*PI;
+    //enemy 6 vars
+    b6X=60;
+    b6Y=-100;
+    b6T=PI;
+    //main character, level 2
+    c2X=150;
+    c2Y=260;
+  }
+  if (b4Y+30>c2Y && c2Y+40>b4Y && b4X+20>c2X && b4X<c2X+20) {
+    count2=0;
+    pageNumber=1;
+    //level 2
+    //enemy 1 vars
+    bX=45;
+    bY=-100;
+    bT=PI;
+    //enemy 2 vars
+    b2X=40;
+    b2Y=-100;
+    b2T=PI/2;
+    //enemy 3 vars
+    b3X=0;
+    b3Y=-100;
+    b3T=PI;
+    //enemy 4 vars
+    b4X=90;
+    b4Y=-100;
+    b4T=.75*PI;
+    //enemy 5 vars
+    b5X=60;
+    b5Y=-100;
+    b5T=-.75*PI;
+    //enemy 6 vars
+    b6X=60;
+    b6Y=-100;
+    b6T=PI;
+    //main character, level 2
+    c2X=150;
+    c2Y=260;
+  }
+  if (b5Y+30>c2Y &&c2Y+40>b5Y && b5X+20>c2X && b5X<c2X+20) {
+    count2=0;
+    pageNumber=1;
+    //level 2
+    //enemy 1 vars
+    bX=45;
+    bY=-100;
+    bT=PI;
+    //enemy 2 vars
+    b2X=40;
+    b2Y=-100;
+    b2T=PI/2;
+    //enemy 3 vars
+    b3X=0;
+    b3Y=-100;
+    b3T=PI;
+    //enemy 4 vars
+    b4X=90;
+    b4Y=-100;
+    b4T=.75*PI;
+    //enemy 5 vars
+    b5X=60;
+    b5Y=-100;
+    b5T=-.75*PI;
+    //enemy 6 vars
+    b6X=60;
+    b6Y=-100;
+    b6T=PI;
+    //main character, level 2
+    c2X=150;
+    c2Y=260;
+  }
+  if (b6Y+30>c3Y && c2Y+40>b3Y &&  b6X+20>c3X && b6X<c3X+20) {
+    count2=0;
+    pageNumber=1;
+    //level 2
+    //enemy 1 vars
+    bX=45;
+    bY=-100;
+    bT=PI;
+    //enemy 2 vars
+    b2X=40;
+    b2Y=-100;
+    b2T=PI/2;
+    //enemy 3 vars
+    b3X=0;
+    b3Y=-100;
+    b3T=PI;
+    //enemy 4 vars
+    b4X=90;
+    b4Y=-100;
+    b4T=.75*PI;
+    //enemy 5 vars
+    b5X=60;
+    b5Y=-100;
+    b5T=-.75*PI;
+    //enemy 6 vars
+    b6X=60;
+    b6Y=-100;
+    b6T=PI;
+    //main character, level 2
+    c2X=150;
+    c2Y=260;
   }
 }

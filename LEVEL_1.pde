@@ -1,13 +1,52 @@
-float c1difX = 0.0; 
-float c1difY = 0.0; 
-boolean core = false;
-boolean lock = false;
-void page3() {
-  if (carY<50) {
-    carY=50;
+//main character vars
+float car1X=20;
+float car1Y=120;
+//enemy 1 vars
+float eX=410;
+float eY=80;
+float eVX=8;
+int AMP1=(int)(random(20)+5);
+float eT;
+
+//enemy 2 vars
+float e2X=490;
+float e2Y=130;
+float e2VX=8;
+int AMP2=(int)(random(5)+5);
+float e2T;
+
+//enemy 3 vars
+float e3X=450;
+float e3Y=210;
+float e3VX=8;
+int AMP3=(int)(random(15)+5);
+float e3T;
+
+//background elements
+float buildX=300;
+float build2X=400;
+float build3X=500;
+float build4X=600;
+float build5X=700;
+float buildY=0;
+//yellow lines
+float Line1X;
+float Line2X=120;
+float Line3X=240;
+float Line4X=360;
+float Line5X=480;
+float Line6X=600;
+float Line7X=720;
+float c0difX = 0.0; 
+float c0difY = 0.0; 
+boolean cor = false;
+boolean loc = false;
+void page6() {
+  if (car1Y<50) {
+    car1Y=50;
   }
-  if (carY+20>250) {
-    carY=230;
+  if (car1Y+20>250) {
+    car1Y=230;
   }
   count++;
   background(#FFFFFF);
@@ -15,212 +54,158 @@ void page3() {
   fill(#8E8282);
   rect(0, 50, 480, 200);
 
-  rect(buildingX, buildingY, 50, 50);
-  rect(building2X, buildingY, 50, 50);
-  rect(building3X, buildingY, 50, 50);
-  rect(building4X, buildingY, 50, 50);
-  rect(building5X, buildingY, 50, 50);
+  rect(buildX, buildY, 50, 50);
+  rect(build2X, buildY, 50, 50);
+  rect(build3X, buildY, 50, 50);
+  rect(build4X, buildY, 50, 50);
+  rect(build5X, buildY, 50, 50);
   fill(#000000);
-  rect(buildingX+10, buildingY+10, 30, 30);
-  rect(building2X+10, buildingY+10, 30, 30);  
-  rect(building3X+10, buildingY+10, 30, 30);  
-  rect(building4X+10, buildingY+10, 30, 30);  
-  rect(building5X+10, buildingY+10, 30, 30);
+  rect(buildX+10, buildY+10, 30, 30);
+  rect(build2X+10, buildY+10, 30, 30);  
+  rect(build3X+10, buildY+10, 30, 30);  
+  rect(build4X+10, buildY+10, 30, 30);  
+  rect(build5X+10, buildY+10, 30, 30);
   fill(#8E8282);
-  rect(buildingX+11, buildingY+11, 28, 28);
-  rect(building2X+11, buildingY+11, 28, 28);  
-  rect(building3X+11, buildingY+11, 28, 28);  
-  rect(building4X+11, buildingY+11, 28, 28);
-  rect(building5X+11, buildingY+11, 28, 28);
-
-
-  buildingX-=5;
-  building2X-=5;  
-  building3X-=5;  
-  building4X-=5;
-  building5X-=5;
-  if (buildingX+50<0) {
-    buildingX=500;
+  rect(buildX+11, buildY+11, 28, 28);
+  rect(build2X+11, buildY+11, 28, 28);  
+  rect(build3X+11, buildY+11, 28, 28);  
+  rect(build4X+11, buildY+11, 28, 28);
+  rect(build5X+11, buildY+11, 28, 28);
+  buildX-=5;
+  build2X-=5;  
+  build3X-=5;  
+  build4X-=5;
+  build5X-=5;
+  if (buildX+50<0) {
+    buildX=500;
   }
-  if (building2X+50<0) {
-    building2X=500;
+  if (build2X+50<0) {
+    build2X=500;
   }
-  if (building3X+50<0) {
-    building3X=500;
+  if (build3X+50<0) {
+    build3X=500;
   }
-  if (building4X+50<0) {
-    building4X=500;
+  if (build4X+50<0) {
+    build4X=500;
   }
-  if (building5X+50<0) {
-    building5X=500;
+  if (build5X+50<0) {
+    build5X=500;
   }
   //yellow lines
   strokeWeight(6);
   stroke(#FFFF00);
-  line(line1X, 50+(200/3), line1X+40, 50+(200/3));
-  line(line2X, 50+(200/3), line2X+40, 50+(200/3));
-  line(line3X, 50+(200/3), line3X+40, 50+(200/3));
-  line(line4X, 50+(200/3), line4X+40, 50+(200/3));
-  line(line5X, 50+(200/3), line5X+40, 50+(200/3));
-  line(line6X, 50+(200/3), line6X+40, 50+(200/3));
-  line(line7X, 50+(200/3), line7X+40, 50+(200/3));
-  line(line1X, 50+(400/3), line1X+40, 50+(400/3));
-  line(line2X, 50+(400/3), line2X+40, 50+(400/3));
-  line(line3X, 50+(400/3), line3X+40, 50+(400/3));
-  line(line4X, 50+(400/3), line4X+40, 50+(400/3));
-  line(line5X, 50+(400/3), line5X+40, 50+(400/3));
-  line(line6X, 50+(400/3), line6X+40, 50+(400/3));
+  line(Line1X, 50+(200/3), Line1X+40, 50+(200/3));
+  line(Line2X, 50+(200/3), Line2X+40, 50+(200/3));
+  line(Line3X, 50+(200/3), Line3X+40, 50+(200/3));
+  line(Line4X, 50+(200/3), Line4X+40, 50+(200/3));
+  line(Line5X, 50+(200/3), Line5X+40, 50+(200/3));
+  line(Line6X, 50+(200/3), Line6X+40, 50+(200/3));
+  line(Line7X, 50+(200/3), Line7X+40, 50+(200/3));
+  line(Line1X, 50+(400/3), Line1X+40, 50+(400/3));
+  line(Line2X, 50+(400/3), Line2X+40, 50+(400/3));
+  line(Line3X, 50+(400/3), Line3X+40, 50+(400/3));
+  line(Line4X, 50+(400/3), Line4X+40, 50+(400/3));
+  line(Line5X, 50+(400/3), Line5X+40, 50+(400/3));
+  line(Line6X, 50+(400/3), Line6X+40, 50+(400/3));
   stroke(0);
   strokeWeight(1);
-  line1X-=5;
-  line2X-=5;
-  line3X-=5;
-  line4X-=5;
-  line5X-=5;
-  line6X-=5;
-  line7X-=5;
-  if (line1X<-120) {
-    line1X=600;
+  Line1X-=5;
+  Line2X-=5;
+  Line3X-=5;
+  Line4X-=5;
+  Line5X-=5;
+  Line6X-=5;
+  Line7X-=5;
+  if (Line1X<-120) {
+    Line1X=600;
   }
-  if (line2X<-120) {
-    line2X=600;
+  if (Line2X<-120) {
+    Line2X=600;
   }
-  if (line3X<-120) {
-    line3X=600;
+  if (Line3X<-120) {
+    Line3X=600;
   }
-  if (line4X<-120) {
-    line4X=600;
+  if (Line4X<-120) {
+    Line4X=600;
   }
-  if (line5X<-120) {
-    line5X=600;
+  if (Line5X<-120) {
+    Line5X=600;
   }
-  if (line6X<-120) {
-    line6X=600;
+  if (Line6X<-120) {
+    Line6X=600;
   }
-  if (line7X<-120) {
-    line7X=600;
+  if (Line7X<-120) {
+    Line7X=600;
   }
   //main character
-  fill(#333FA7, opacity);
-  rect(carX, carY, 50, 20);
-
+  fill(#333FA7);
+  rect(car1X, car1Y, 50, 20);
   //enemy 1
   fill(#FF0000);
-  rect(aX, aY, 50, 20);
-  cT+=.1;
-  aX-=aVX;
-  aY=80+amp1*sin(cT);
+  rect(eX, eY, 50, 20);
+  eT+=.1;
+  eX-=eVX;
+  eY=80+AMP1*sin(cT);
 
   //enemy 2
-  c2T+=.3;
-  rect(a2X, a2Y, 50, 20);
-  a2Y=145+amp2*sin(c2T);
-  a2X-=a2VX;
+  e2T+=.3;
+  rect(e2X, e2Y, 50, 20);
+  e2Y=145+AMP2*sin(c2T);
+  e2X-=e2VX;
 
-  //enemy 3
-  c3T+=.075;
-  rect(a3X, a3Y, 50, 20);
-  a3Y=210+amp3*sin(c3T);
-  a3X-=a3VX;
-  if (aX<carX-80) {
-    aX=520;
-    amp1=(int)(random(20)+5);
-    aVX=(int)random(15)+8;
+  if (eX<car1X-80) {
+    eX=520;
+    AMP1=(int)(random(20)+5);
+    eVX=(int)random(15)+8;
   }
-  if (a2X<carX-80) {
-    a2X=520;
-    amp2=(int)(random(5)+5);
-    a2VX=(int)random(15)+8;
+  if (e2X<car1X-80) {
+    e2X=520;
+    AMP2=(int)(random(5)+5);
+    e2VX=(int)random(15)+8;
   }
-  if (a3X<carX-80) {
-    a3X=520;
-    amp3=(int)(random(15)+5);
-    a3VX=(int)random(15)+8;
-  }
+
 
   // COllISION WITH ENEMY 1
-  if (aX<carX+50 && carY+20>aY && carY<aY+20) {
+  if (eX<car1X+50 && car1Y+20>eY && car1Y<eY+20) {
     pageNumber=1;
     count=0;
     //main character vars
-    carX=20;
-    carY=120;
+    car1X=20;
+    car1Y=120;
     //enemy 1 vars
-    aX=410;
-    aY=80;
-    aVX=8;
-    amp1=(int)(random(20)+5);
-    cT=0;
+    eX=410;
+    eY=80;
+    eVX=8;
+    AMP1=(int)(random(20)+5);
+    eT=0;
 
     //enemy 2 vars
-    a2X=490;
-    a2Y=130;
-    a2VX=8;
-    amp2=(int)(random(5)+5);
-    c2T=0;
-
-    //enemy 3 vars
-    a3X=450;
-    a3Y=210;
-    a3VX=8;
-    amp3=(int)(random(15)+5);
-    c3T=0;
+    e2X=490;
+    e2Y=130;
+    e2VX=8;
+    AMP2=(int)(random(5)+5);
+    e2T=0;
   }
   // COllISION WITH ENEMY 2
-  if (a2X<carX+50 && carY+20>a2Y && carY<a2Y+20) {
+  if (e2X<car1X+50 && car1Y+20>e2Y && carY<e2Y+20) {
     pageNumber=1;
     count=0;
     //main character vars
-    carX=20;
-    carY=120;
+    car1X=20;
+    car1Y=120;
     //enemy 1 vars
-    aX=410;
-    aY=80;
-    aVX=8;
-    amp1=(int)(random(20)+5);
-    cT=0;
+    eX=410;
+    eY=80;
+    eVX=8;
+    AMP1=(int)(random(20)+5);
+    eT=0;
 
     //enemy 2 vars
-    a2X=490;
-    a2Y=130;
-    a2VX=8;
-    amp2=(int)(random(5)+5);
-    c2T=0;
-
-    //enemy 3 vars
-    a3X=450;
-    a3Y=210;
-    a3VX=8;
-    amp3=(int)(random(15)+5);
-    c3T=0;
-  } 
-  // COllISION WITH ENEMY 3
-  if (a3X<carX+50 && carY+20>a3Y && carY<a3Y+20) {
-    pageNumber=1;
-    count=0;
-    //main character vars
-    carX=20;
-    carY=120;
-    //enemy 1 vars
-    aX=410;
-    aY=80;
-    aVX=8;
-    amp1=(int)(random(20)+5);
-    cT=0;
-
-    //enemy 2 vars
-    a2X=490;
-    a2Y=130;
-    a2VX=8;
-    amp2=(int)(random(5)+5);
-    c2T=0;
-
-    //enemy 3 vars
-    a3X=450;
-    a3Y=210;
-    a3VX=8;
-    amp3=(int)(random(15)+5);
-    c3T=0;
+    e2X=490;
+    e2Y=130;
+    e2VX=8;
+    AMP2=(int)(random(5)+5);
+    e2T=0;
   }
   textSize(15);
   text(count, 100, 100);
@@ -228,17 +213,15 @@ void page3() {
   fill(0, alpha);
   stroke(0, alpha);
   ellipse(400, 280, 40, 40);
-  if (count>300 && aX<-50 && a2X<-50&& a3X<-50) {
-    alpha=255;
-    aVX=0;
-    a2VX=0;
-    a3VX=0;
+  if (count>300 && eX<-50 && e2X<-50&& e3X<-50) {
+    eVX=0;
+    e2VX=0;
   }
-  if (mouseX>carX && mouseX<carX+50 && mouseY>carY && mouseY<carY+20) {
-    core = true;  
-    if (!lock) {
+  if (mouseX>car1X && mouseX<car1X+50 && mouseY>car1Y && mouseY<car1Y+20) {
+    cor = true;  
+    if (!loc) {
     }
   } else {
-    core = false;
+    cor = false;
   }
 }

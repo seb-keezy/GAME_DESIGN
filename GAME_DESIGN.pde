@@ -66,18 +66,24 @@ void draw() {
   if (pageNumber==5) {
     page5();
   }
+  if (pageNumber==6) {
+    page6();
+  }
   if (keyPressed) {
     if (key == 'b') {
       pageNumber=1;
     }
-    if (key == '1') {
+    if (key == '2') {
       pageNumber=3;
     }
-    if (key == '2') {
+    if (key == '3') {
       pageNumber=4;
     }
-    if (key == '3') {
+    if (key == '4') {
       pageNumber=5;
+    }
+    if (key=='1') {
+      pageNumber=6;
     }
   }
 }
@@ -118,11 +124,17 @@ void mousePressed() {
     c3difX = mouseX-c3X; 
     c3difY = mouseY-c3Y;
   }
+  if (pageNumber==6) {
+    if (cor) { 
+      loc = true;
+    } else {
+      loc = false;
+    }
+    c0difX = mouseX-car1X; 
+    c0difY = mouseY-car1Y;
+  }
 }
-void mouseReleased(){
-
-
-
+void mouseReleased() {
 }
 void mouseDragged() {
   if (carY<50) {
@@ -156,5 +168,8 @@ void mouseDragged() {
   }
   if (lose) {
     c2X = mouseX-c2difX;
+  }
+  if (loc) {
+    car1Y = mouseY-c0difY;
   }
 }
