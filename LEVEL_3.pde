@@ -301,11 +301,11 @@ void page4() {
   else{
     alpha3=0;
   }
-  if (mouseX<c2X && mouseX>c2X+20 && mouseY<c2Y && mouseY>c2Y+40) {
-    core = true;  
-    if (!lock) {
+  if (mouseX>c2X && mouseX<c2X+20 && mouseY>c2Y && mouseY<c2Y+40) {
+    corp = true;  
+    if (!lose) {
     }
   } else {
-    core = false;
+    corp = false;
   }
 }

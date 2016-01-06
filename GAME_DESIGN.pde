@@ -63,7 +63,7 @@ void draw() {
   if (pageNumber==4) {
     page3();
   }
-  if (pageNumber==5) {
+  if (pageNumber==5) { //
     page4();
   }
   if (pageNumber==6) {
@@ -126,7 +126,7 @@ void mousePressed() {
   if(pageNumber==8 && (dist(mouseX,mouseY,400,280)<20)){
     pageNumber=1;
   }
-  if (pageNumber==3) // later on change this to 3umber==5)// 
+  if (pageNumber==5) // later on change this to 3umber==5)// 
   {
     if (corp) { 
       lose = true;
