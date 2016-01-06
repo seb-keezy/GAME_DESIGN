@@ -230,7 +230,7 @@ void page3() {
   fill(0, alpha2);
   stroke(0, alpha2);
   ellipse(400, 280, 40, 40);
-  if (count2>300) {
+  if (count2>500) {
     alpha2=255;
     aVX=0;
     a2VX=0;
