@@ -44,7 +44,11 @@ float line7X=720;
 int pageNumber=1;
 //next page button
 float alpha;
-
+//keyboard controls: WASD
+int moveL;
+int moveR;
+int moveU;
+int moveD;
 void setup() {
   frameRate(30);
   size(480, 320);
@@ -69,11 +73,11 @@ void draw() {
   if (pageNumber==6) {
     page5();
   }
-  if(pageNumber==7){
+  if (pageNumber==7) {
     EndGame();
   }
-  if(pageNumber==8){
-  page7();
+  if (pageNumber==8) {
+    page7();
   }
   if (keyPressed) {
     if (key == 'b') {
@@ -91,15 +95,62 @@ void draw() {
     if (key=='1') {
       pageNumber=3;
     }
-    if (key=='e'){
+    if (key=='e') {
       pageNumber=7;
     }
-    if(key=='5'){
-    pageNumber=8;
+    if (key=='5') {
+      pageNumber=8;
+    }
+    if (key == 'a' || key == 'A') {
+      moveL = 1;
+    }
+    if (key == 'd' || key == 'D') {
+      moveR = 1;
+    }
+    if (key == 'w' || key == 'W') {
+      moveU = 1;
+    }
+    if (key == 's' || key == 'S') {
+      moveD = 1;
     }
   }
+  keyboardMovement();
 }
-
+void keyReleased() {
+  if (key == 'a' || key == 'A') {
+    moveL = 0;
+  }
+  if (key == 'd' || key == 'D') {
+    moveR = 0;
+  }
+  if (key == 'w' || key == 'W') {
+    moveU = 0;
+  }
+  if (key == 's' || key == 'S') {
+    moveD = 0;
+  }
+}
+void keyboardMovement() {
+  //WASD controls
+  if (moveL == 1) {
+    c2X-=10;
+  }
+  if (moveR == 1) {
+    c2X+=10;
+  }
+  if (moveU == 1) {
+    car1Y-=10;
+    carY-=10;    
+    c3Y-=10;    
+    c4Y-=10;
+  }
+  if (moveD == 1) {
+    car1Y+=10;
+    carY+=10;    
+    c3Y+=10;    
+    c4Y+=10;
+  }
+}
 void mousePressed() {
   // click to start game
   if (pageNumber==1&&(mouseX>100 && mouseX<350 && mouseY>200 && mouseY<240)) {
@@ -108,22 +159,22 @@ void mousePressed() {
   if (pageNumber==2 && (dist(mouseX, mouseY, 400, 280)<20)) {
     pageNumber=3;
   }
-  if(pageNumber==3&&alpha==255&&(dist(mouseX,mouseY,400,280)<20)){
+  if (pageNumber==3&&alpha==255&&(dist(mouseX, mouseY, 400, 280)<20)) {
     pageNumber=4;
   }
-  if(pageNumber==4 && alpha2==255 && (dist(mouseX,mouseY,400,280)<20)){
+  if (pageNumber==4 && alpha2==255 && (dist(mouseX, mouseY, 400, 280)<20)) {
     pageNumber=5;
   }
-  if(pageNumber==5 && alpha3==255 && (dist(mouseX,mouseY,400,280)<20)){
+  if (pageNumber==5 && alpha3==255 && (dist(mouseX, mouseY, 400, 280)<20)) {
     pageNumber=6;
   }
-  if(pageNumber==6 && alpha4==255 && (dist(mouseX,mouseY,400,280)<20)){
+  if (pageNumber==6 && alpha4==255 && (dist(mouseX, mouseY, 400, 280)<20)) {
     pageNumber=7;
   }
-  if(pageNumber==7 && (dist(mouseX,mouseY,400,280)<20)){
+  if (pageNumber==7 && (dist(mouseX, mouseY, 400, 280)<20)) {
     pageNumber=1;
   }
-  if(pageNumber==8 && (dist(mouseX,mouseY,400,280)<20)){
+  if (pageNumber==8 && (dist(mouseX, mouseY, 400, 280)<20)) {
     pageNumber=1;
   }
   if (pageNumber==5) // later on change this to 3umber==5)// 
