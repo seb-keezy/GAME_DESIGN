@@ -155,8 +155,8 @@ void page6() {
   vertex(sX-250, 25*.2);
   vertex(sX-225, 75*.2);
   endShape(CLOSE);
-  
-  
+
+
   strokeWeight(5);
   line(s2X, 135*.2, s2X+20, 135*.2);
   line(s2X, 185*.2, s2X+20, 185*.2);
@@ -256,19 +256,13 @@ void page6() {
   vertex(s2X-225, 75*.2);
   endShape(CLOSE);
   sX-=5;
-    s2X-=5;
+  s2X-=5;
   if (sX+350<0) {
     sX=720;
   }
- if (s2X+350<0) {
+  if (s2X+350<0) {
     s2X=720;
   }
-
-
-
-
-
-
 
 
   //yellow lines

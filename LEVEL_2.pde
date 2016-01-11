@@ -226,8 +226,6 @@ void page3() {
     s4X=720;
   }
 
-
-
   //yellow lines
   strokeWeight(6);
   stroke(#FFFF00);
@@ -449,13 +447,6 @@ void page3() {
   } else {
     alpha2=0;
   }
-
-
-
-
-
-
-
 
   if (mouseX>carX && mouseX<carX+50 && mouseY>carY && mouseY<carY+20) {
     core = true;  
