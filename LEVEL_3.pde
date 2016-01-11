@@ -297,8 +297,7 @@ void page4() {
     b4T=PI;
     b5T=PI;
     b6T=PI;
-  }
-  else{
+  } else {
     alpha3=0;
   }
   if (mouseX>c2X && mouseX<c2X+20 && mouseY>c2Y && mouseY<c2Y+40) {

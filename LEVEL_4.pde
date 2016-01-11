@@ -25,6 +25,12 @@ float d3Y=210;
 float d3VX=8;
 int Amp3=(int)(random(15)+5);
 float d3T;
+//enemy 4 vars
+float d4X=450;
+float d4Y=140;
+float d4VX=8;
+int Amp4=(int)(random(15)+5);
+float d4T;
 int count4=0;
 void page5() {
   count4++;
@@ -105,7 +111,47 @@ void page5() {
   }
   //main character
   fill(#333FA7, opacity);
-  rect(c3X, c3Y, 50, 20);
+
+  strokeWeight(3);
+  stroke(#000000);
+  strokeWeight(1);
+  fill(#333FA7);
+  beginShape();
+  vertex(c3X, c3Y+20); //380 //120
+  vertex(c3X, c3Y+10); //350 //110
+  vertex(c3X+5, c3Y); //340 100
+  vertex(c3X+25, c3Y); //340 100
+  vertex(c3X+37.5, c3Y+10); //360 110
+  vertex(c3X+50, c3Y+10); //360 110
+  vertex(c3X+50, c3Y+20); //120
+  endShape(CLOSE);
+  fill(#FFFFFF);
+  beginShape();
+  vertex(c3X+4, c3Y+10);
+  vertex(c3X+4, c3Y+10);
+  vertex(c3X+6.5, c3Y+5);
+  vertex(c3X+6.5, c3Y+10);
+  endShape(CLOSE);
+  fill(#000000);
+  ellipse(c3X+12.5, c3Y+20, 10, 10);
+  ellipse(c3X+30, c3Y+20, 10, 10);
+  fill(#BCB8B8);
+  ellipse(c3X+12.5, c3Y+20, 6, 6);
+  ellipse(c3X+30, c3Y+20, 6, 6);
+  fill(#FFFFFF);
+  beginShape();
+  vertex(c3X+11, c3Y+5);
+  vertex(c3X+11, c3Y+10);
+  vertex(c3X+22.5, c3Y+10);
+  vertex(c3X+22.5, c3Y+5);
+  endShape(CLOSE);
+  beginShape();
+  vertex(c3X+25, c3Y+5);
+  vertex(c3X+25, c3Y+10);
+  vertex(c3X+25, c3Y+10);
+  endShape(CLOSE);
+  fill(#958585);
+  quad(c3X+50, c3Y+15, c3X+50, c3Y+20, c3X+45, c3Y+20, c3X+45, c3Y+15);
   if (mouseX>c3X && mouseX<c3X+50 && mouseY>c3Y && mouseY<c3Y+20) {
     corn = true;  
     if (!locked) {
@@ -118,19 +164,25 @@ void page5() {
   rect(dX, dY, 50, 20);
   dT+=.1;
   dX-=dVX;
-  dY=80+Amp1*sin(cT);
+  dY=80+Amp1*sin(dT);
 
   //enemy 2
   d2T+=.3;
   rect(d2X, d2Y, 50, 20);
-  d2Y=145+Amp2*sin(c2T);
+  d2Y=145+Amp2*sin(d2T);
   d2X-=d2VX;
 
   //enemy 3
   d3T+=.075;
   rect(d3X, d3Y, 50, 20);
-  d3Y=210+Amp3*sin(c3T);
+  d3Y=210+Amp3*sin(d3T);
   d3X-=d3VX;
+
+  //enemy 4
+  d4T+=.04;
+  rect(d4X, d4Y, 50, 20);
+  d4Y=160+Amp4*sin(d4T);
+  d4X-=d4VX;
   if (dX<c3X-80) {
     dX=520;
     Amp1=(int)(random(20)+5);
@@ -145,6 +197,11 @@ void page5() {
     d3X=520;
     Amp3=(int)(random(15)+5);
     d3VX=(int)random(15)+8;
+  }
+  if (d4X<c3X-80) {
+    d4X=520;
+    Amp4=(int)(random(15)+5);
+    d4VX=(int)random(15)+8;
   }
 
   // COllISION WITH ENEMY 1
@@ -174,6 +231,12 @@ void page5() {
     d3VX=8;
     Amp3=(int)(random(15)+5);
     d3T=0;
+
+    d4X=450;
+    d4Y=210;
+    d4VX=8;
+    Amp4=(int)(random(15)+5);
+    d4T=0;
   }
   // COllISION WITH ENEMY 2
   if (d2X<c3X+50 && c3Y+20>d2Y && c3Y<d2Y+20) {
@@ -202,6 +265,12 @@ void page5() {
     d3VX=8;
     Amp3=(int)(random(15)+5);
     d3T=0;
+
+    d4X=450;
+    d4Y=210;
+    d4VX=8;
+    Amp4=(int)(random(15)+5);
+    d4T=0;
   } 
   // COllISION WITH ENEMY 3
   if (d3X<c3X+50 && c3Y+20>d3Y && c3Y<d3Y+20) {
@@ -230,6 +299,46 @@ void page5() {
     d3VX=8;
     Amp3=(int)(random(15)+5);
     d3T=0;
+
+    d4X=450;
+    d4Y=210;
+    d4VX=8;
+    Amp4=(int)(random(15)+5);
+    d4T=0;
+  }
+  // COllISION WITH ENEMY 4
+  if (d4X<c3X+50 && c3Y+20>d4Y && c3Y<d4Y+20) {
+    pageNumber=1;
+    count4=0;
+    //main character vars
+    c3X=20;
+    c3Y=120;
+    //enemy 1 vars
+    dX=410;
+    dY=80;
+    dVX=8;
+    Amp1=(int)(random(20)+5);
+    dT=0;
+
+    //enemy 2 vars
+    d2X=490;
+    d2Y=130;
+    d2VX=8;
+    Amp2=(int)(random(5)+5);
+    d2T=0;
+
+    //enemy 3 vars
+    d3X=450;
+    d3Y=210;
+    d3VX=8;
+    Amp3=(int)(random(15)+5);
+    d3T=0;
+
+    d4X=450;
+    d4Y=210;
+    d4VX=8;
+    Amp4=(int)(random(15)+5);
+    d4T=0;
   }
   fill(0, alpha4);
   stroke(0, alpha4);
@@ -239,8 +348,7 @@ void page5() {
     d2VX=0;
     d3VX=0;
     alpha4=255;
+  } else {
+    alpha4=0;
   }
-  else{
-      alpha4=0;
-    }
 }

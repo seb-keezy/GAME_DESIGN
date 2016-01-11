@@ -42,7 +42,7 @@ float c0difY = 0.0;
 boolean cor = false;
 boolean loc = false;
 int count=0;
-void page6(){
+void page6() {
   count++;
   if (car1Y<50) {
     car1Y=50;
@@ -140,8 +140,8 @@ void page6(){
     Line7X=600;
   }
   //main character
-  fill(#333FA7);
-  rect(car1X, car1Y, 50, 20);
+
+
   //enemy 1
   fill(#FF0000);
   rect(eX, eY, 50, 20);
@@ -219,10 +219,9 @@ void page6(){
     eVX=0;
     e2VX=0;
     alpha=255;
+  } else {
+    alpha=0;
   }
-  else{
-      alpha=0;
-    }
   if (mouseX>car1X && mouseX<car1X+50 && mouseY>car1Y && mouseY<car1Y+20) {
     cor = true;  
     if (!loc) {
@@ -230,4 +229,45 @@ void page6(){
   } else {
     cor = false;
   }
+
+  strokeWeight(3);
+  stroke(#000000);
+  strokeWeight(1);
+  fill(#333FA7);
+  beginShape();
+  vertex(car1X, car1Y+20); //380 //120
+  vertex(car1X, car1Y+10); //350 //110
+  vertex(car1X+5, car1Y); //340 100
+  vertex(car1X+25, car1Y); //340 100
+  vertex(car1X+37.5, car1Y+10); //360 110
+  vertex(car1X+50, car1Y+10); //360 110
+  vertex(car1X+50, car1Y+20); //120
+  endShape(CLOSE);
+  fill(#FFFFFF);
+  beginShape();
+  vertex(car1X+4, car1Y+10);
+  vertex(car1X+4, car1Y+10);
+  vertex(car1X+6.5, car1Y+5);
+  vertex(car1X+6.5, car1Y+10);
+  endShape(CLOSE);
+  fill(#000000);
+  ellipse(car1X+12.5, car1Y+20, 10, 10);
+  ellipse(car1X+30, car1Y+20, 10, 10);
+  fill(#BCB8B8);
+  ellipse(car1X+12.5, car1Y+20, 6, 6);
+  ellipse(car1X+30, car1Y+20, 6, 6);
+  fill(#FFFFFF);
+  beginShape();
+  vertex(car1X+11, car1Y+5);
+  vertex(car1X+11, car1Y+10);
+  vertex(car1X+22.5, car1Y+10);
+  vertex(car1X+22.5, car1Y+5);
+  endShape(CLOSE);
+  beginShape();
+  vertex(car1X+25, car1Y+5);
+  vertex(car1X+25, car1Y+10);
+  vertex(car1X+25, car1Y+10);
+  endShape(CLOSE);
+  fill(#958585);
+  quad(car1X+50, car1Y+15, car1X+50, car1Y+20, car1X+45, car1Y+20, car1X+45, car1Y+15);
 }

@@ -104,8 +104,47 @@ void page3() {
   }
   //main character
   fill(#333FA7, opacity);
-  rect(carX, carY, 50, 20);
 
+  strokeWeight(3);
+  stroke(#000000);
+  strokeWeight(1);
+  fill(#333FA7);
+  beginShape();
+  vertex(carX, carY+20); //380 //120
+  vertex(carX, carY+10); //350 //110
+  vertex(carX+5, carY); //340 100
+  vertex(carX+25, carY); //340 100
+  vertex(carX+37.5, carY+10); //360 110
+  vertex(carX+50, carY+10); //360 110
+  vertex(carX+50, carY+20); //120
+  endShape(CLOSE);
+  fill(#FFFFFF);
+  beginShape();
+  vertex(carX+4, carY+10);
+  vertex(carX+4, carY+10);
+  vertex(carX+6.5, carY+5);
+  vertex(carX+6.5, carY+10);
+  endShape(CLOSE);
+  fill(#000000);
+  ellipse(carX+12.5, carY+20, 10, 10);
+  ellipse(carX+30, carY+20, 10, 10);
+  fill(#BCB8B8);
+  ellipse(carX+12.5, carY+20, 6, 6);
+  ellipse(carX+30, carY+20, 6, 6);
+  fill(#FFFFFF);
+  beginShape();
+  vertex(carX+11, carY+5);
+  vertex(carX+11, carY+10);
+  vertex(carX+22.5, carY+10);
+  vertex(carX+22.5, carY+5);
+  endShape(CLOSE);
+  beginShape();
+  vertex(carX+25, carY+5);
+  vertex(carX+25, carY+10);
+  vertex(carX+25, carY+10);
+  endShape(CLOSE);
+  fill(#958585);
+  quad(carX+50, carY+15, carX+50, carY+20, carX+45, carY+20, carX+45, carY+15);
   //enemy 1
   fill(#FF0000);
   rect(aX, aY, 50, 20);
@@ -235,18 +274,17 @@ void page3() {
     aVX=0;
     a2VX=0;
     a3VX=0;
-  }
-  else{
+  } else {
     alpha2=0;
   }
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
   if (mouseX>carX && mouseX<carX+50 && mouseY>carY && mouseY<carY+20) {
     core = true;  
     if (!lock) {

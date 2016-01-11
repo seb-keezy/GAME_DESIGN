@@ -117,7 +117,47 @@ void page7() {
   }
   //main character
   fill(#333FA7, opacity);
-  rect(c4X, c4Y, 50, 20);
+
+  strokeWeight(3);
+  stroke(#000000);
+  strokeWeight(1);
+  fill(#333FA7);
+  beginShape();
+  vertex(c4X, c4Y+20); //380 //120
+  vertex(c4X, c4Y+10); //350 //110
+  vertex(c4X+5, c4Y); //340 100
+  vertex(c4X+25, c4Y); //340 100
+  vertex(c4X+37.5, c4Y+10); //360 110
+  vertex(c4X+50, c4Y+10); //360 110
+  vertex(c4X+50, c4Y+20); //120
+  endShape(CLOSE);
+  fill(#FFFFFF);
+  beginShape();
+  vertex(c4X+4, c4Y+10);
+  vertex(c4X+4, c4Y+10);
+  vertex(c4X+6.5, c4Y+5);
+  vertex(c4X+6.5, c4Y+10);
+  endShape(CLOSE);
+  fill(#000000);
+  ellipse(c4X+12.5, c4Y+20, 10, 10);
+  ellipse(c4X+30, c4Y+20, 10, 10);
+  fill(#BCB8B8);
+  ellipse(c4X+12.5, c4Y+20, 6, 6);
+  ellipse(c4X+30, c4Y+20, 6, 6);
+  fill(#FFFFFF);
+  beginShape();
+  vertex(c4X+11, c4Y+5);
+  vertex(c4X+11, c4Y+10);
+  vertex(c4X+22.5, c4Y+10);
+  vertex(c4X+22.5, c4Y+5);
+  endShape(CLOSE);
+  beginShape();
+  vertex(c4X+25, c4Y+5);
+  vertex(c4X+25, c4Y+10);
+  vertex(c4X+25, c4Y+10);
+  endShape(CLOSE);
+  fill(#958585);
+  quad(c4X+50, c4Y+15, c4X+50, c4Y+20, c4X+45, c4Y+20, c4X+45, c4Y+15);
   if (mouseX>c4X && mouseX<c4X+50 && mouseY>c4Y && mouseY<c4Y+20) {
     co = true;  
     if (!lo) {
@@ -262,7 +302,7 @@ void page7() {
     f3VX=8;
     Ap3=(int)(random(15)+5);
     f3T=0;
-        //enemy 4 vars
+    //enemy 4 vars
     f4X=450;
     f4Y=210;
     f4VX=8;
@@ -302,7 +342,7 @@ void page7() {
     d3VX=8;
     Ap3=(int)(random(15)+5);
     f3T=0;
-        //enemy 4 vars
+    //enemy 4 vars
     f4X=450;
     f4Y=210;
     f4VX=8;
