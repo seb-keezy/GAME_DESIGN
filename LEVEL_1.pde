@@ -42,6 +42,8 @@ float c0difY = 0.0;
 boolean cor = false;
 boolean loc = false;
 int count=0;
+int sX=240;
+int s2X=780;
 void page6() {
   count++;
   if (car1Y<50) {
@@ -55,44 +57,220 @@ void page6() {
   //street
   fill(#8E8282);
   rect(0, 50, 480, 200);
+  strokeWeight(5);
+  line(sX, 135*.2, sX+20, 135*.2);
+  line(sX, 185*.2, sX+20, 185*.2);
+  line(sX+45, 140*.2, sX+65, 165*.2);
+  line(sX+45, 190*.2, sX+65, 215*.2);
+  line(sX+90, 175*.2, sX+110, 205*.2);
+  line(sX+90, 225*.2, sX+110, 250*.2);
+  line(sX+135, 220*.2, sX+155, 220*.2);
+  line(sX+135, 265*.2, sX+155, 265*.2);
+  line(sX+180, 250*.2, sX+200, 225*.2);
+  line(sX+180, 205*.2, sX+200, 180*.2);
+  line(sX+225, 165*.2, sX+245, 140*.2);
+  line(sX+225, 210*.2, sX+245, 185*.2);
 
-  rect(buildX, buildY, 50, 50);
-  rect(build2X, buildY, 50, 50);
-  rect(build3X, buildY, 50, 50);
-  rect(build4X, buildY, 50, 50);
-  rect(build5X, buildY, 50, 50);
-  fill(#000000);
-  rect(buildX+10, buildY+10, 30, 30);
-  rect(build2X+10, buildY+10, 30, 30);  
-  rect(build3X+10, buildY+10, 30, 30);  
-  rect(build4X+10, buildY+10, 30, 30);  
-  rect(build5X+10, buildY+10, 30, 30);
-  fill(#8E8282);
-  rect(buildX+11, buildY+11, 28, 28);
-  rect(build2X+11, buildY+11, 28, 28);  
-  rect(build3X+11, buildY+11, 28, 28);  
-  rect(build4X+11, buildY+11, 28, 28);
-  rect(build5X+11, buildY+11, 28, 28);
-  buildX-=5;
-  build2X-=5;  
-  build3X-=5;  
-  build4X-=5;
-  build5X-=5;
-  if (buildX+50<0) {
-    buildX=500;
+  line(sX-25, 140*.2, sX-45, 165*.2);
+  line(sX-25, 190*.2, sX-45, 215*.2);
+  line(sX-70, 175*.2, sX-90, 205*.2);
+  line(sX-70, 225*.2, sX-90, 250*.2);
+  line(sX-115, 220*.2, sX-135, 220*.2);
+  line(sX-115, 265*.2, sX-135, 265*.2);
+  line(sX-160, 250*.2, sX-180, 225*.2);
+  line(sX-160, 205*.2, sX-180, 180*.2);
+  line(sX-205, 165*.2, sX-225, 140*.2);
+  line(sX-205, 210*.2, sX-225, 185*.2);
+  strokeWeight(1);
+  fill(#CECECE);
+  beginShape();
+  vertex(sX+20, 300*.2);
+  vertex(sX+45, 300*.2);
+  vertex(sX+45, 75*.2);
+  vertex(sX+20, 25*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(sX+65, 300*.2);
+  vertex(sX+90, 300*.2);
+  vertex(sX+90, 125*.2);
+  vertex(sX+65, 75*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(sX+110, 300*.2);
+  vertex(sX+135, 300*.2);
+  vertex(sX+135, 175*.2);
+  vertex(sX+110, 125*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(sX+155, 300*.2);
+  vertex(sX+180, 300*.2);
+  vertex(sX+180, 125*.2);
+  vertex(sX+155, 175*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(sX+200, 300*.2);
+  vertex(sX+225, 300*.2);
+  vertex(sX+225, 75*.2);
+  vertex(sX+200, 125*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(sX+245, 300*.2);
+  vertex(sX+270, 300*.2);
+  vertex(sX+270, 25*.2);
+  vertex(sX+245, 75*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(sX-25, 300*.2);
+  vertex(sX, 300*.2);
+  vertex(sX, 25*.2);
+  vertex(sX-25, 75*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(sX-45, 300*.2);
+  vertex(sX-70, 300*.2);
+  vertex(sX-70, 125*.2);
+  vertex(sX-45, 75*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(sX-115, 300*.2);
+  vertex(sX-90, 300*.2);
+  vertex(sX-90, 125*.2);
+  vertex(sX-115, 175*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(sX-135, 300*.2);
+  vertex(sX-160, 300*.2);
+  vertex(sX-160, 125*.2);
+  vertex(sX-135, 175*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(sX-180, 300*.2);
+  vertex(sX-205, 300*.2);
+  vertex(sX-205, 75*.2);
+  vertex(sX-180, 125*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(sX-225, 300*.2);
+  vertex(sX-250, 300*.2);
+  vertex(sX-250, 25*.2);
+  vertex(sX-225, 75*.2);
+  endShape(CLOSE);
+  
+  
+  strokeWeight(5);
+  line(s2X, 135*.2, s2X+20, 135*.2);
+  line(s2X, 185*.2, s2X+20, 185*.2);
+  line(s2X+45, 140*.2, s2X+65, 165*.2);
+  line(s2X+45, 190*.2, s2X+65, 215*.2);
+  line(s2X+90, 175*.2, s2X+110, 205*.2);
+  line(s2X+90, 225*.2, s2X+110, 250*.2);
+  line(s2X+135, 220*.2, s2X+155, 220*.2);
+  line(s2X+135, 265*.2, s2X+155, 265*.2);
+  line(s2X+180, 250*.2, s2X+200, 225*.2);
+  line(s2X+180, 205*.2, s2X+200, 180*.2);
+  line(s2X+225, 165*.2, s2X+245, 140*.2);
+  line(s2X+225, 210*.2, s2X+245, 185*.2);
+
+  line(s2X-25, 140*.2, s2X-45, 165*.2);
+  line(s2X-25, 190*.2, s2X-45, 215*.2);
+  line(s2X-70, 175*.2, s2X-90, 205*.2);
+  line(s2X-70, 225*.2, s2X-90, 250*.2);
+  line(s2X-115, 220*.2, s2X-135, 220*.2);
+  line(s2X-115, 265*.2, s2X-135, 265*.2);
+  line(s2X-160, 250*.2, s2X-180, 225*.2);
+  line(s2X-160, 205*.2, s2X-180, 180*.2);
+  line(s2X-205, 165*.2, s2X-225, 140*.2);
+  line(s2X-205, 210*.2, s2X-225, 185*.2);
+  strokeWeight(1);
+  fill(#CECECE);
+  beginShape();
+  vertex(s2X+20, 300*.2);
+  vertex(s2X+45, 300*.2);
+  vertex(s2X+45, 75*.2);
+  vertex(s2X+20, 25*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(s2X+65, 300*.2);
+  vertex(s2X+90, 300*.2);
+  vertex(s2X+90, 125*.2);
+  vertex(s2X+65, 75*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(s2X+110, 300*.2);
+  vertex(s2X+135, 300*.2);
+  vertex(s2X+135, 175*.2);
+  vertex(s2X+110, 125*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(s2X+155, 300*.2);
+  vertex(s2X+180, 300*.2);
+  vertex(s2X+180, 125*.2);
+  vertex(s2X+155, 175*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(s2X+200, 300*.2);
+  vertex(s2X+225, 300*.2);
+  vertex(s2X+225, 75*.2);
+  vertex(s2X+200, 125*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(s2X+245, 300*.2);
+  vertex(s2X+270, 300*.2);
+  vertex(s2X+270, 25*.2);
+  vertex(s2X+245, 75*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(s2X-25, 300*.2);
+  vertex(s2X, 300*.2);
+  vertex(s2X, 25*.2);
+  vertex(s2X-25, 75*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(s2X-45, 300*.2);
+  vertex(s2X-70, 300*.2);
+  vertex(s2X-70, 125*.2);
+  vertex(s2X-45, 75*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(s2X-115, 300*.2);
+  vertex(s2X-90, 300*.2);
+  vertex(s2X-90, 125*.2);
+  vertex(s2X-115, 175*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(s2X-135, 300*.2);
+  vertex(s2X-160, 300*.2);
+  vertex(s2X-160, 125*.2);
+  vertex(s2X-135, 175*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(s2X-180, 300*.2);
+  vertex(s2X-205, 300*.2);
+  vertex(s2X-205, 75*.2);
+  vertex(s2X-180, 125*.2);
+  endShape(CLOSE);
+  beginShape();
+  vertex(s2X-225, 300*.2);
+  vertex(s2X-250, 300*.2);
+  vertex(s2X-250, 25*.2);
+  vertex(s2X-225, 75*.2);
+  endShape(CLOSE);
+  sX-=5;
+    s2X-=5;
+  if (sX+350<0) {
+    sX=720;
   }
-  if (build2X+50<0) {
-    build2X=500;
+ if (s2X+350<0) {
+    s2X=720;
   }
-  if (build3X+50<0) {
-    build3X=500;
-  }
-  if (build4X+50<0) {
-    build4X=500;
-  }
-  if (build5X+50<0) {
-    build5X=500;
-  }
+
+
+
+
+
+
+
+
   //yellow lines
   strokeWeight(6);
   stroke(#FFFF00);
