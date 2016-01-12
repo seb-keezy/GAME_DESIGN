@@ -351,7 +351,6 @@ void page3() {
 
   // COllISION WITH ENEMY 1
   if (aX<carX+50 && carY+20>aY && carY<aY+20) {
-    pageNumber=1;
     count2=0;
     //main character vars
     carX=20;
@@ -379,7 +378,6 @@ void page3() {
   }
   // COllISION WITH ENEMY 2
   if (a2X<carX+50 && carY+20>a2Y && carY<a2Y+20) {
-    pageNumber=1;
     count2=0;
     //main character vars
     carX=20;
@@ -407,7 +405,6 @@ void page3() {
   } 
   // COllISION WITH ENEMY 3
   if (a3X<carX+50 && carY+20>a3Y && carY<a3Y+20) {
-    pageNumber=1;
     count2=0;
     //main character vars
     carX=20;

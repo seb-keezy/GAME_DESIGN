@@ -133,22 +133,22 @@ void keyReleased() {
 void keyboardMovement() {
   //WASD controls
   if (moveL == 1) {
-    c2X-=10;
+    c2X-=7;
   }
   if (moveR == 1) {
-    c2X+=10;
+    c2X+=7;
   }
   if (moveU == 1) {
-    car1Y-=10;
-    carY-=10;    
-    c3Y-=10;    
-    c4Y-=10;
+    car1Y-=7;
+    carY-=7;    
+    c3Y-=7;    
+    c4Y-=7;
   }
   if (moveD == 1) {
-    car1Y+=10;
-    carY+=10;    
-    c3Y+=10;    
-    c4Y+=10;
+    car1Y+=7;
+    carY+=7;    
+    c3Y+=7;    
+    c4Y+=7;
   }
 }
 void mousePressed() {

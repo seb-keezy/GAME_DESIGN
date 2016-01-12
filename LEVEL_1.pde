@@ -5,14 +5,14 @@ float car1Y=120;
 float eX=410;
 float eY=200/3;
 float eVX=8;
-int AMP1=(int)(random(20)+5);
+int AMP1=(int)(random(30)+5);
 float eT;
 
 //enemy 2 vars
 float e2X=490;
 float e2Y=400/3;
 float e2VX=8;
-int AMP2=(int)(random(10)+5);
+int AMP2=(int)(random(30)+5);
 float e2T;
 
 //enemy 3 vars
@@ -319,29 +319,28 @@ void page6() {
   rect(eX, eY, 50, 20);
   eT+=.1;
   eX-=eVX;
-  eY=50+(200/3)+AMP1*sin(eT);
+  eY=30+(200/3)+AMP1*sin(eT);
 
   //enemy 2
-  e2T+=.3;
+  e2T+=.07;
   rect(e2X, e2Y, 50, 20);
-  e2Y=50+(400/3)+AMP2*sin(e2T);
+  e2Y=30+(400/3)+AMP2*sin(e2T);
   e2X-=e2VX;
 
   if (eX<-80) {
     eX=520;
-    AMP1=(int)(random(20)+5);
+    AMP1=(int)(random(30)+5);
     eVX=(int)random(15)+8;
   }
   if (e2X<-80) {
     e2X=520;
-    AMP2=(int)(random(5)+5);
+    AMP2=(int)(random(20)+5);
     e2VX=(int)random(15)+8;
   }
 
 
   // COllISION WITH ENEMY 1
-  if (eX<car1X+50 && car1Y+20>eY && car1Y<eY+20) {
-    pageNumber=1;
+  if (eX<car1X+40 && car1Y+20>eY && car1Y<eY+20) {
     count=0;
     //main character vars
     car1X=20;
@@ -350,19 +349,18 @@ void page6() {
     eX=410;
     eY=50+(200/3);
     eVX=8;
-    AMP1=(int)(random(20)+5);
+    AMP1=(int)(random(30)+5);
     eT=0;
 
     //enemy 2 vars
     e2X=490;
     e2Y=50+(400/3);
     e2VX=8;
-    AMP2=(int)(random(5)+5);
+    AMP2=(int)(random(20)+5);
     e2T=0;
   }
   // COllISION WITH ENEMY 2
-  if (e2X<car1X+50 && car1Y+20>e2Y && car1Y<e2Y+20) {
-    pageNumber=1;
+  if (e2X<car1X+40 && car1Y+20>e2Y && car1Y<e2Y+20) {
     count=0;
     //main character vars
     car1X=20;
@@ -371,14 +369,14 @@ void page6() {
     eX=410;
     eY=50+(200/3);
     eVX=8;
-    AMP1=(int)(random(20)+5);
+    AMP1=(int)(random(30)+5);
     eT=0;
 
     //enemy 2 vars
     e2X=490;
     e2Y=50+(400/3);
     e2VX=8;
-    AMP2=(int)(random(5)+5);
+    AMP2=(int)(random(20)+5);
     e2T=0;
   }
   textSize(15);
