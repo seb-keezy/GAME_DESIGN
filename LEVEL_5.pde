@@ -9,13 +9,13 @@ int alpha5;
 float fX=410;
 float fY=80;
 float fVX=8;
-int Ap1=(int)(random(20)+5);
+int Ap1=(int)(random(10)+5);
 float fT;
 
 //enemy 2 vars
 float f2X=490;
 float f2Y=130;
-float f2VX=8;
+float f2VX=4;
 int Ap2=(int)(random(5)+5);
 float f2T;
 
@@ -28,13 +28,13 @@ float f3T;
 //enemy 4 vars
 float f4X=450;
 float f4Y=210;
-float f4VX=8;
+float f4VX=6;
 int Ap4=(int)(random(15)+5);
 float f4T;
 //enemy 5 vars
 float f5X=450;
 float f5Y=210;
-float f5VX=8;
+float f5VX=5;
 int Ap5=(int)(random(15)+5);
 float f5T;
 int count5=0;
@@ -393,18 +393,18 @@ void page7() {
   f3X-=f3VX;
   if (fX<c4X-80) {
     fX=520;
-    Ap1=(int)(random(20)+5);
-    fVX=(int)random(15)+8;
+    Ap1=(int)(random(10)+5);
+    fVX=(int)random(5)+8;
   }
   //enemy 4
   f4T+=.075;
   rect(f4X, f4Y, 50, 20);
   f4Y=160+Ap4*sin(f4T);
-  f3X-=f3VX;
+  f4X-=f4VX;
   if (fX<c4X-80) {
     fX=520;
     Ap4=(int)(random(20)+5);
-    fVX=(int)random(15)+8;
+    fVX=(int)random(6)+4;
   }
   //enemy 5
   f5T+=.075;
@@ -414,17 +414,17 @@ void page7() {
   if (fX<c4X-80) {
     fX=520;
     Ap5=(int)(random(20)+5);
-    fVX=(int)random(15)+8;
+    fVX=(int)random(8)+5;
   }
   if (f2X<c4X-80) {
     f2X=520;
     Ap2=(int)(random(5)+5);
-    f2VX=(int)random(15)+8;
+    f2VX=(int)random(3)+8;
   }
   if (f3X<c4X-80) {
     f3X=520;
     Ap3=(int)(random(15)+5);
-    f3VX=(int)random(15)+8;
+    f3VX=(int)random(5)+8;
   }
 
   // COllISION WITH ENEMY 1
@@ -437,7 +437,7 @@ void page7() {
     fX=410;
     fY=80;
     fVX=8;
-    Ap1=(int)(random(20)+5);
+    Ap1=(int)(random(10)+5);
     fT=0;
 
     //enemy 2 vars
@@ -464,7 +464,7 @@ void page7() {
     fX=410;
     fY=80;
     fVX=8;
-    Ap1=(int)(random(20)+5);
+    Ap1=(int)(random(10)+5);
     fT=0;
 
     //enemy 2 vars
@@ -491,7 +491,7 @@ void page7() {
     fX=410;
     fY=80;
     fVX=8;
-    Ap1=(int)(random(20)+5);
+    Ap1=(int)(random(10)+5);
     fT=0;
 
     //enemy 2 vars
@@ -530,7 +530,7 @@ void page7() {
     fX=410;
     fY=80;
     fVX=8;
-    Ap1=(int)(random(20)+5);
+    Ap1=(int)(random(10)+5);
     fT=0;
 
     //enemy 2 vars
@@ -569,7 +569,7 @@ void page7() {
     fX=410;
     fY=80;
     fVX=8;
-    Ap1=(int)(random(20)+5);
+    Ap1=(int)(random(10)+5);
     fT=0;
 
     //enemy 2 vars
@@ -608,7 +608,7 @@ void page7() {
     fX=410;
     fY=80;
     fVX=8;
-    Ap1=(int)(random(20)+5);
+    Ap1=(int)(random(10)+5);
     fT=0;
 
     //enemy 2 vars
