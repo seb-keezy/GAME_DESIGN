@@ -96,7 +96,6 @@ void page4() {
   text(count3, 100, 100);
   if (bY+30>c2Y && c2Y+40>bY && bX+20>c2X && bX<c2X+20) {
     count3=0;
-    pageNumber=1;
     //level 2
     //enemy 1 vars
     bX=45;
@@ -128,7 +127,6 @@ void page4() {
   }
   if (b2Y+30>c2Y && c2Y+40>b2Y && b2X+20>c2X && b2X<c2X+20) {
     count3=0;
-    pageNumber=1;
     //level 2
     //enemy 1 vars
     bX=45;
@@ -160,7 +158,6 @@ void page4() {
   }
   if (b3Y+30>c2Y && c2Y+40>b3Y && b3X+20>c2X && b3X<c2X+20) {
     count3=0;
-    pageNumber=1;
     //level 2
     //enemy 1 vars
     bX=45;
@@ -192,7 +189,6 @@ void page4() {
   }
   if (b4Y+30>c2Y && c2Y+40>b4Y && b4X+20>c2X && b4X<c2X+20) {
     count3=0;
-    pageNumber=1;
     //level 2
     //enemy 1 vars
     bX=45;
@@ -224,7 +220,6 @@ void page4() {
   }
   if (b5Y+30>c2Y &&c2Y+40>b5Y && b5X+20>c2X && b5X<c2X+20) {
     count3=0;
-    pageNumber=1;
     //level 2
     //enemy 1 vars
     bX=45;
@@ -256,7 +251,6 @@ void page4() {
   }
   if (b6Y+30>c3Y && c2Y+40>b3Y &&  b6X+20>c3X && b6X<c3X+20) {
     count3=0;
-    pageNumber=1;
     //level 2
     //enemy 1 vars
     bX=45;
