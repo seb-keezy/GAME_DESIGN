@@ -431,7 +431,7 @@ void page3() {
     c3T=0;
   }
   textSize(15);
-  text(count2, 100, 100);
+  text(count2, 50, 300);
   //Button for next page
   fill(0, alpha2);
   stroke(0, alpha2);

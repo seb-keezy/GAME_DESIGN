@@ -93,7 +93,7 @@ void page4() {
     corp = false;
   }
   textSize(10);
-  text(count3, 100, 100);
+  text(count3, 50, 300);
   if (bY+30>c2Y && c2Y+40>bY && bX+20>c2X && bX<c2X+20) {
     count3=0;
     //level 2

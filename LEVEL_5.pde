@@ -648,4 +648,7 @@ void page7() {
   } else {
     alpha5=0;
   }
+  fill(#ff0000);
+  textSize(15);
+  text(count5,50,300);
 }

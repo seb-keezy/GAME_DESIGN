@@ -380,7 +380,7 @@ void page6() {
     e2T=0;
   }
   textSize(15);
-  text(count, 100, 100);
+  text(count, 50, 300);
   //Button for next page
   fill(0, alpha);
   stroke(0, alpha);

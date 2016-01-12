@@ -555,4 +555,7 @@ void page5() {
   } else {
     alpha4=0;
   }
+  fill(#ff0000);
+  textSize(15);
+  text(count4,50,300);
 }
