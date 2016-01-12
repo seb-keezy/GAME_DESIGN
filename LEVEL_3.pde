@@ -55,16 +55,16 @@ void page4() {
   fill(#FF0000);
   rect(bX, bY, 20, 30);
   bY=145+210*sin(bT);
-  bX=80+200*cos(bT);
+  bX=80+200*cos(bT); // Collisions work
   //enemy 2B movement
   b2T+=.05;
   rect(b2X, b2Y, 20, 30);
   b2Y=145+210*sin(b2T);
-  b2X=40+300*cos(b2T);
+  b2X=40+300*cos(b2T); // Collisions work
   //enemy 3B movement
   b3T+=.075;
   rect(b3X, b3Y, 20, 30);
-  b3Y=145+210*sin(b3T);
+  b3Y=145+210*sin(b3T); // Collisions work
   b3X=0+250*cos(b3T);
   //enemy 4B movement
   b4T+=.04;
@@ -249,7 +249,7 @@ void page4() {
     c2X=150;
     c2Y=260;
   }
-  if (b6Y+30>c3Y && c2Y+40>b3Y &&  b6X+20>c3X && b6X<c3X+20) {
+  if (b6Y+30>c2Y && c2Y+40>b6Y &&  b6X+20>c2X && b6X<c2X+20) {
     count3=0;
     //level 2
     //enemy 1 vars
