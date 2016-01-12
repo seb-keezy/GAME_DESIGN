@@ -252,7 +252,7 @@ void mouseDragged() {
   }
   //
   if (locked) {
-    c3Y = mouseY-c3difY;
+    c3Y = mouseY-c3difY; //s
   }
   if (lock) {
     carY = mouseY-c1difY;
