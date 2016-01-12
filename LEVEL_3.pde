@@ -24,7 +24,7 @@ float b6X=100;
 float b6Y=150;
 float b6T=PI;
 //main character, level 2
-float c2X=150;
+float c2X=250;
 float c2Y=260;
 float count3;
 //spot drag varriables
@@ -122,7 +122,7 @@ void page4() {
     b6Y=-100;
     b6T=PI;
     //main character, level 2
-    c2X=150;
+    c2X=250;
     c2Y=260;
   }
   if (b2Y+30>c2Y && c2Y+40>b2Y && b2X+20>c2X && b2X<c2X+20) {
@@ -153,7 +153,7 @@ void page4() {
     b6Y=-100;
     b6T=PI;
     //main character, level 2
-    c2X=150;
+    c2X=250;
     c2Y=260;
   }
   if (b3Y+30>c2Y && c2Y+40>b3Y && b3X+20>c2X && b3X<c2X+20) {
@@ -184,7 +184,7 @@ void page4() {
     b6Y=-100;
     b6T=PI;
     //main character, level 2
-    c2X=150;
+    c2X=250;
     c2Y=260;
   }
   if (b4Y+30>c2Y && c2Y+40>b4Y && b4X+20>c2X && b4X<c2X+20) {
@@ -215,7 +215,7 @@ void page4() {
     b6Y=-100;
     b6T=PI;
     //main character, level 2
-    c2X=150;
+    c2X=250;
     c2Y=260;
   }
   if (b5Y+30>c2Y &&c2Y+40>b5Y && b5X+20>c2X && b5X<c2X+20) {
@@ -246,7 +246,7 @@ void page4() {
     b6Y=-100;
     b6T=PI;
     //main character, level 2
-    c2X=150;
+    c2X=250;
     c2Y=260;
   }
   if (b6Y+30>c2Y && c2Y+40>b6Y &&  b6X+20>c2X && b6X<c2X+20) {
@@ -277,7 +277,7 @@ void page4() {
     b6Y=-100;
     b6T=PI;
     //main character, level 2
-    c2X=150;
+    c2X=250;
     c2Y=260;
   }
   fill(0, alpha3);
