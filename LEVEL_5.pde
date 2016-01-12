@@ -391,10 +391,10 @@ void page7() {
   rect(f3X, f3Y, 50, 20);
   f3Y=210+Ap3*sin(f3T);
   f3X-=f3VX;
-  if (f4X<c4X-80) {
-    f4X=520;
-    Ap4=(int)(random(10)+5);
-    f4VX=(int)random(5)+8;
+  if (fX<c4X-80) {
+    fX=520;
+    Ap1=(int)(random(10)+5);
+    fVX=(int)random(5)+8;
   }
   //enemy 4
   f4T+=.075;
@@ -403,7 +403,7 @@ void page7() {
   f4X-=f4VX;
   if (fX<c4X-80) {
     fX=520;
-    Ap1=(int)(random(20)+5);
+    Ap4=(int)(random(20)+5);
     fVX=(int)random(6)+4;
   }
   //enemy 5
@@ -411,10 +411,10 @@ void page7() {
   rect(f5X, f5Y, 50, 20);
   f5Y=50+Ap5*sin(f5T);
   f5X-=f5VX;
-  if (f5X<c4X-80) {
-    f5X=520;
+  if (fX<c4X-80) {
+    fX=520;
     Ap5=(int)(random(20)+5);
-    f5VX=(int)random(8)+5;
+    fVX=(int)random(8)+5;
   }
   if (f2X<c4X-80) {
     f2X=520;
@@ -426,47 +426,7 @@ void page7() {
     Ap3=(int)(random(15)+5);
     f3VX=(int)random(5)+8;
   }
-  /*wsw
-  // COllISION WITH ENEMY 2
-  if (f2X<c4X+50 && c4Y+20>f2Y && c4Y<f2Y+20) {
-    count5=0;
-    //main character vars
-    c4X=20;
-    c4Y=120;
-    //enemy 1 vars
-    fX=410;
-    fY=80;
-    fVX=8;
-    Ap1=(int)(random(10)+5);
-    fT=0;
 
-    //enemy 2 vars
-    f2X=490;
-    f2Y=130;
-    f2VX=8;
-    Ap2=(int)(random(5)+5);
-    f2T=0;
-
-    //enemy 3 vars
-    f3X=450;
-    f3Y=210;
-    d3VX=8;
-    Ap3=(int)(random(15)+5);
-    f3T=0;
-    //enemy 4 vars
-    f4X=450;
-    f4Y=210;
-    f4VX=8;
-    Ap4=(int)(random(15)+5);
-    f4T=0;
-    //enemy 5 vars
-    f5X=450;
-    f5Y=210;
-    f5VX=8;
-    Ap5=(int)(random(15)+5);
-    f5T=0;
-  } 
-    */
   // COllISION WITH ENEMY 1
   if (fX<c4X+50 && c4Y+20>fY && c4Y<fY+20) {
     count5=0;
@@ -493,20 +453,7 @@ void page7() {
     f3VX=8;
     Ap3=(int)(random(15)+5);
     f3T=0;
-     //enemy 4 vars
-    f4X=450;
-    f4Y=210;
-    f4VX=8;
-    Ap4=(int)(random(15)+5);
-    f4T=0;
-    //enemy 5 vars
-    f5X=450;
-    f5Y=210;
-    f5VX=8;
-    Ap5=(int)(random(15)+5);
-    f5T=0;
   }
-
   // COllISION WITH ENEMY 2
   if (f2X<c4X+50 && c4Y+20>f2Y && c4Y<f2Y+20) {
     count5=0;
@@ -533,19 +480,6 @@ void page7() {
     d3VX=8;
     Ap3=(int)(random(15)+5);
     f3T=0;
-    
-     //enemy 4 vars
-    f4X=450;
-    f4Y=210;
-    f4VX=8;
-    Ap4=(int)(random(15)+5);
-    f4T=0;
-    //enemy 5 vars
-    f5X=450;
-    f5Y=210;
-    f5VX=8;
-    Ap5=(int)(random(15)+5);
-    f5T=0;
   } 
   // COllISION WITH ENEMY 3
   if (f3X<c4X+50 && c4Y+20>f3Y && c4Y<f3Y+20) {
@@ -586,7 +520,45 @@ void page7() {
     Ap5=(int)(random(15)+5);
     f5T=0;
   }
+  // COllISION WITH ENEMY 2
+  if (f2X<c4X+50 && c4Y+20>f2Y && c4Y<f2Y+20) {
+    count5=0;
+    //main character vars
+    c4X=20;
+    c4Y=120;
+    //enemy 1 vars
+    fX=410;
+    fY=80;
+    fVX=8;
+    Ap1=(int)(random(10)+5);
+    fT=0;
 
+    //enemy 2 vars
+    f2X=490;
+    f2Y=130;
+    f2VX=8;
+    Ap2=(int)(random(5)+5);
+    f2T=0;
+
+    //enemy 3 vars
+    f3X=450;
+    f3Y=210;
+    d3VX=8;
+    Ap3=(int)(random(15)+5);
+    f3T=0;
+    //enemy 4 vars
+    f4X=450;
+    f4Y=210;
+    f4VX=8;
+    Ap4=(int)(random(15)+5);
+    f4T=0;
+    //enemy 5 vars
+    f5X=450;
+    f5Y=210;
+    f5VX=8;
+    Ap5=(int)(random(15)+5);
+    f5T=0;
+  } 
   // COllISION WITH ENEMY 4
   if (f4X<c4X+50 && c4Y+20>f4Y && c4Y<f4Y+20) {
     count5=0;
@@ -678,5 +650,5 @@ void page7() {
   }
   fill(#ff0000);
   textSize(15);
-  text(count5, 50, 300);
+  text(count5,50,300);
 }
