@@ -33,6 +33,39 @@ float c2difY = 0.0;
 boolean corp = false;
 boolean lose = false;
 float alpha3;
+//line vars
+float lX;
+float lY;
+float lT;
+
+float l2X;
+float l2Y;
+float l2T=PI/4;
+
+float l3X;
+float l3Y;
+float l3T=PI/2;
+
+float l4X;
+float l4Y;
+float l4T=.75*PI;
+
+float l5X;
+float l5Y;
+float l5T=PI;
+
+float l6X;
+float l6Y;
+float l6T=1.25*PI;
+
+float l7X;
+float l7Y;
+float l7T=1.5*PI;
+
+float l8X;
+float l8Y;
+float l8T=1.75*PI;
+
 //round about
 void page4() {
 
@@ -42,6 +75,7 @@ void page4() {
   if (c2X<118) {
     c2X=118;
   }
+  
   count3++;
   stroke(0);
   background(255);
@@ -50,6 +84,62 @@ void page4() {
   ellipse(100, 160, 700, 650);
   fill(255);
   ellipse(-100, 160, 480, 480);
+  lT+=.07;
+  l2T+=.07;
+  l3T+=.07;
+  l4T+=.07;
+  l5T+=.07;
+  l6T+=.07;
+  l7T+=.07;
+  l8T+=.07;
+  stroke(#ffff00);
+  strokeWeight(5);
+  line(lX,lY,lX,lY+40);
+  line(l2X,l2Y,l2X,l2Y+40);
+  line(l3X,l3Y,l3X,l3Y+40);
+  line(l4X,l4Y,l4X,l4Y+40);
+  line(l5X,l5Y,l5X,l5Y+40);
+  line(l6X,l6Y,l6X,l6Y+40);
+  line(l7X,l7Y,l7X,l7Y+40);
+  line(l8X,l8Y,l8X,l8Y+40);
+  
+  line(lX+75,lY,lX+75,lY+40);
+  line(l2X+75,l2Y,l2X+75,l2Y+40);
+  line(l3X+75,l3Y,l3X+75,l3Y+40);
+  line(l4X+75,l4Y,l4X+75,l4Y+40);
+  line(l5X+75,l5Y,l5X+75,l5Y+40);
+  line(l6X+75,l6Y,l6X+75,l6Y+40);
+  line(l7X+75,l7Y,l7X+75,l7Y+40);
+  line(l8X+75,l8Y,l8X+75,l8Y+40);
+  
+  line(lX+150,lY,lX+150,lY+40);
+  line(l2X+150,l2Y,l2X+150,l2Y+40);
+  line(l3X+150,l3Y,l3X+150,l3Y+40);
+  line(l4X+150,l4Y,l4X+150,l4Y+40);
+  line(l5X+150,l5Y,l5X+150,l5Y+40);
+  line(l6X+150,l6Y,l6X+150,l6Y+40);
+  line(l7X+150,l7Y,l7X+150,l7Y+40);
+  line(l8X+150,l8Y,l8X+150,l8Y+40);
+  
+  lX=5+220*cos(lT);
+  l2X=5+220*cos(l2T);
+  l3X=5+220*cos(l3T);
+  l4X=5+220*cos(l4T);
+  l5X=5+220*cos(l5T);
+  l6X=5+220*cos(l6T);
+  l7X=5+220*cos(l7T);
+  l8X=5+220*cos(l8T);
+  
+  lY=175+250*sin(lT);
+  l2Y=175+250*sin(l2T);
+  l3Y=175+250*sin(l3T);
+  l4Y=175+250*sin(l4T);
+  l5Y=175+250*sin(l5T);
+  l6Y=175+250*sin(l6T);
+  l7Y=175+250*sin(l7T);
+  l8Y=175+250*sin(l8T);
+  stroke(0);
+  strokeWeight(1);
   //enemy 1B movement
   bT+=.1;
   fill(#FF0000);
@@ -280,6 +370,7 @@ void page4() {
     c2X=150;
     c2Y=260;
   }
+  
   fill(0, alpha3);
   stroke(0, alpha3);
   ellipse(400, 280, 40, 40);
