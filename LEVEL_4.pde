@@ -414,7 +414,6 @@ void page5() {
 
   // COllISION WITH ENEMY 1
   if (dX<c3X+50 && c3Y+20>dY && c3Y<dY+20) {
-    pageNumber=1;
     count4=0;
     //main character vars
     c3X=20;
@@ -448,7 +447,6 @@ void page5() {
   }
   // COllISION WITH ENEMY 2
   if (d2X<c3X+50 && c3Y+20>d2Y && c3Y<d2Y+20) {
-    pageNumber=1;
     count4=0;
     //main character vars
     c3X=20;
@@ -482,7 +480,6 @@ void page5() {
   } 
   // COllISION WITH ENEMY 3
   if (d3X<c3X+50 && c3Y+20>d3Y && c3Y<d3Y+20) {
-    pageNumber=1;
     count4=0;
     //main character vars
     c3X=20;
@@ -516,7 +513,6 @@ void page5() {
   }
   // COllISION WITH ENEMY 4
   if (d4X<c3X+50 && c3Y+20>d4Y && c3Y<d4Y+20) {
-    pageNumber=1;
     count4=0;
     //main character vars
     c3X=20;

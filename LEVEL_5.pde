@@ -429,7 +429,6 @@ void page7() {
 
   // COllISION WITH ENEMY 1
   if (fX<c4X+50 && c4Y+20>fY && c4Y<fY+20) {
-    pageNumber=1;
     count5=0;
     //main character vars
     c4X=20;
@@ -457,7 +456,6 @@ void page7() {
   }
   // COllISION WITH ENEMY 2
   if (f2X<c4X+50 && c4Y+20>f2Y && c4Y<f2Y+20) {
-    pageNumber=1;
     count5=0;
     //main character vars
     c4X=20;
@@ -485,7 +483,6 @@ void page7() {
   } 
   // COllISION WITH ENEMY 3
   if (f3X<c4X+50 && c4Y+20>f3Y && c4Y<f3Y+20) {
-    pageNumber=1;
     count5=0;
     //main character vars
     c4X=20;
@@ -525,7 +522,6 @@ void page7() {
   }
   // COllISION WITH ENEMY 2
   if (f2X<c4X+50 && c4Y+20>f2Y && c4Y<f2Y+20) {
-    pageNumber=1;
     count5=0;
     //main character vars
     c4X=20;
@@ -565,7 +561,6 @@ void page7() {
   } 
   // COllISION WITH ENEMY 4
   if (f4X<c4X+50 && c4Y+20>f4Y && c4Y<f4Y+20) {
-    pageNumber=1;
     count5=0;
     //main character vars
     c4X=20;
@@ -605,7 +600,6 @@ void page7() {
   }
   // COllISION WITH ENEMY 5
   if (f5X<c4X+50 && c4Y+20>f5Y && c4Y<f5Y+20) {
-    pageNumber=1;
     count5=0;
     //main character vars
     c4X=20;
