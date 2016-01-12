@@ -57,27 +57,27 @@ void page4() {
   bY=145+210*sin(bT);
   bX=80+200*cos(bT); // Collisions work
   //enemy 2B movement
-  b2T+=.05;
+  b2T+=.025;
   rect(b2X, b2Y, 20, 30);
   b2Y=145+210*sin(b2T);
   b2X=40+300*cos(b2T); // Collisions work
   //enemy 3B movement
-  b3T+=.075;
+  b3T+=.0375;
   rect(b3X, b3Y, 20, 30);
   b3Y=145+210*sin(b3T); // Collisions work
   b3X=0+250*cos(b3T);
   //enemy 4B movement
-  b4T+=.04;
+  b4T+=.02;
   rect(b4X, b4Y, 20, 30);
   b4Y=110+250*sin(b4T);
   b4X=90+300*cos(b4T);
   //enemy 5B movement
-  b5T+=.075;
+  b5T+=.0375;
   rect(b5X, b5Y, 20, 30);
   b5Y=110+250*sin(b5T);
   b5X=60+350*cos(b5T);
   //enemy 6B movement
-  b6T+=.075;
+  b6T+=.0375;
   rect(b6X, b6Y, 20, 30);
   b6Y=110+250*sin(b6T);
   b6X=60+110*cos(b6T);
@@ -283,7 +283,7 @@ void page4() {
   fill(0, alpha3);
   stroke(0, alpha3);
   ellipse(400, 280, 40, 40);
-  if (count3>300) {
+  if (count3>500) {
     alpha3=255;
     bT=PI;
     b2T=PI;
